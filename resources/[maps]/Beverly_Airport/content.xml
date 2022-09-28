@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDataFileMgr__ContentsOfDataFileXml>
+	<disabledFiles />
+	<includedXmlFiles />
+	<includedDataFiles />
+	<dataFiles>
+		<Item>
+			<filename>dlc_CustomMaps:/%PLATFORM%/levels/gta5/_citye/maps/custom_maps.rpf</filename>
+			<fileType>RPF_FILE</fileType>
+			<locked value="true"/>
+			<disabled value="true"/>
+			<persistent value="true"/>
+			<overlay value="false"/>
+		</Item>
+	</dataFiles>
+	<contentChangeSets>
+		<Item>
+			<changeSetName>CCS_CUSTOM_MAPS_STREAMING_MAP</changeSetName>
+			<filesToEnable>
+				<Item>dlc_CustomMaps:/%PLATFORM%/levels/gta5/_citye/maps/custom_maps.rpf</Item>
+			</filesToEnable>
+			<executionConditions>
+				<activeChangesetConditions>
+				</activeChangesetConditions>
+				<genericConditions>$level=MO_JIM_L11</genericConditions>
+			</executionConditions>
+		</Item>
+	</contentChangeSets>
+	<patchFiles />
+</CDataFileMgr__ContentsOfDataFileXml>
