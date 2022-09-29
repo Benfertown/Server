@@ -368,7 +368,6 @@ AddEventHandler("qb-burgershot:SoftDrink", function()
         else
             QBCore.Functions.Notify("You don't have any soda syrup..", "error")
         end
-      end)
     else
         QBCore.Functions.Notify("You must be Clocked into work", "error")
     end
