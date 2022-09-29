@@ -194,42 +194,43 @@ end)
 RegisterNetEvent("qb-burgershot:MoneyShot")
 AddEventHandler("qb-burgershot:MoneyShot", function()
     if onDuty then
-		local pattyCount = 0
+		
 		QBCore.Functions.TriggerCallback('qb-burgershot:server:CheckPatties_moneyshot', function(patties) 
+			local pattyCount = 0
+			
 			if patties then 
-				pattyCount = 2 
+				pattyCount = patties
 			else 
-				pattyCount = 0 
+				pattyCount = 0
+			end
+
+			local hasIngredients = (
+				pattyCount >= 2 and
+				QBCore.Functions.HasItem('burger-lettuce') and
+				QBCore.Functions.HasItem('burger-tomato') and
+				QBCore.Functions.HasItem('burger-bun'))			
+
+			if hasIngredients then
+				QBCore.Functions.Progressbar("pickup_sla", "Making A MoneyShot Burger..", 4000, false, true, {
+						disableMovement = true,
+						disableCarMovement = true,
+						disableMouse = false,
+						disableCombat = true,
+					}, {
+						animDict = "mp_common",
+						anim = "givetake1_a",
+						flags = 8,
+					}, {}, {}, function() -- Done
+						TriggerServerEvent('qb-burgershot:server:makeMeal-moneyshot')
+						QBCore.Functions.Notify("You made a Moneyshot Burger", "success")
+					end, function()
+						QBCore.Functions.Notify("Cancelled..", "error")
+					end)
+			else
+				QBCore.Functions.Notify("You don't have the right ingredients!", "error", 5000)
+				QBCore.Functions.Notify("You only have " .. pattyCount .. " patty(s)", "error", 5000)
 			end
 		end)
-
-		local hasIngredients = (
-			pattyCount >= 2 and
-			QBCore.Functions.HasItem('burger-lettuce') and
-			QBCore.Functions.HasItem('burger-tomato') and
-			QBCore.Functions.HasItem('burger-bun'))			
-
-		if hasIngredients then
-			QBCore.Functions.Progressbar("pickup_sla", "Making A MoneyShot Burger..", 4000, false, true, {
-					disableMovement = true,
-					disableCarMovement = true,
-					disableMouse = false,
-					disableCombat = true,
-				}, {
-					animDict = "mp_common",
-					anim = "givetake1_a",
-					flags = 8,
-				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-burgershot:server:makeMeal-moneyshot')
-					QBCore.Functions.Notify("You made a Moneyshot Burger", "success")
-				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
-				end)
-		else
-			QBCore.Functions.Notify("You don't have the right ingredients!", "error", 5000)
-			QBCore.Functions.Notify("You only have " .. pattyCount .. " patty(s)", "error", 5000)
-		end
-
 	else
 		QBCore.Functions.Notify("You're not clocked in...", "error", 5000)
 	end

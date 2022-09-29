@@ -204,12 +204,9 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:CheckPatties_moneyshot', f
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
     local patties = xPlayer.Functions.GetItemByName('burger-meat')
-    local pattyCount = 0
 
     if patties then
-        if patties.amount >= 2 then
-            cb(true)
-        end
+        cb(patties.amount)
     else
         cb(false)
     end
