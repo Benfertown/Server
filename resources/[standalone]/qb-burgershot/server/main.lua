@@ -120,5 +120,5 @@ RegisterNetEvent('qb-burgershot:server:cookFries', function()
     if not xPlayer then return end
 
     xPlayer.Functions.RemoveItem('burger-potato', 1)
-    xPlayer.Functions.AddItem('burger-fries', 1)
+    xPlayer.Functions.AddItem('burger-fries', 4)
 end)
