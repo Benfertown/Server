@@ -160,44 +160,11 @@ end)
 RegisterNetEvent("qb-burgershot:BleederBurger")
 AddEventHandler("qb-burgershot:BleederBurger", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-burgershot:server:get:ingredientBurger', function(HasItems)  
-    		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making Burgers..", 4000, false, true, {
-					disableMovement = true,
-					disableCarMovement = true,
-					disableMouse = false,
-					disableCombat = true,
-				}, {
-					animDict = "mp_common",
-					anim = "givetake1_a",
-					flags = 8,
-				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-meat", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-lettuce", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-bun", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-tomato", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "burger-bleeder", 1)
-                    			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-bleeder"], "add")
-                    			QBCore.Functions.Notify("You made a Bleeder Burger", "success")
-				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
-				end)
-			else
-   				QBCore.Functions.Notify("You dont have the ingredients to make this", "error")
-			end
-		end)
-	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
-	end
-end)
-
-RegisterNetEvent("qb-burgershot:MoneyShot")
-AddEventHandler("qb-burgershot:MoneyShot", function()
-    if onDuty then
 		local hasIngredients = (
-			QBCore.Functions.HasItems(
-				'burger-meat', 'burger-lettuce', 
-				'burger-tomato', 'burger-bun'))
+			QBCore.Functions.HasItem('burger-meat') and
+			QBCore.Functions.HasItem('burger-lettuce') and
+			QBCore.Functions.HasItem('burger-tomato') and
+			QBCore.Functions.HasItem('burger-bun'))			
 
 		if hasIngredients then
 			QBCore.Functions.Progressbar("pickup_sla", "Making A Bleeder Burger..", 4000, false, true, {
@@ -224,15 +191,49 @@ AddEventHandler("qb-burgershot:MoneyShot", function()
 	end
 end)
 
+RegisterNetEvent("qb-burgershot:MoneyShot")
+AddEventHandler("qb-burgershot:MoneyShot", function()
+    if onDuty then
+		local hasIngredients = (
+			QBCore.Functions.HasItem('burger-meat') and
+			QBCore.Functions.HasItem('burger-lettuce') and
+			QBCore.Functions.HasItem('burger-tomato') and
+			QBCore.Functions.HasItem('burger-bun'))			
+
+		if hasIngredients then
+			QBCore.Functions.Progressbar("pickup_sla", "Making A MoneyShot Burger..", 4000, false, true, {
+					disableMovement = true,
+					disableCarMovement = true,
+					disableMouse = false,
+					disableCombat = true,
+				}, {
+					animDict = "mp_common",
+					anim = "givetake1_a",
+					flags = 8,
+				}, {}, {}, function() -- Done
+					TriggerServerEvent('qb-burgershot:server:makeMeal-moneyshot')
+					QBCore.Functions.Notify("You made a Moneyshot Burger", "success")
+				end, function()
+					QBCore.Functions.Notify("Cancelled..", "error")
+				end)
+		else
+			QBCore.Functions.Notify("You don't have the right ingredients!", "error", 5000)
+		end
+
+	else
+		QBCore.Functions.Notify("You're not clocked in...", "error", 5000)
+	end
+end)
+
 RegisterNetEvent("qb-burgershot:HeartStopper")
 AddEventHandler("qb-burgershot:HeartStopper", function()
     if onDuty then
     
 		local hasIngredients = (
-			QBCore.Functions.HasItem('burger-meat') and 
-			QBCore.Functions.HasItem('burger-lettuce') and 
-			QBCore.Functions.HasItem('burger-tomato') and 
-			QBCore.Functions.HasItem('burger-bun'))
+			QBCore.Functions.HasItem('burger-meat') and
+			QBCore.Functions.HasItem('burger-lettuce') and
+			QBCore.Functions.HasItem('burger-tomato') and
+			QBCore.Functions.HasItem('burger-bun'))			
 
 		if hasIngredients then
 			QBCore.Functions.Progressbar("pickup_sla", "Making A Heartstopper Burger..", 4000, false, true, {
@@ -265,8 +266,8 @@ AddEventHandler("qb-burgershot:Torpedo", function()
 	if onDuty then
     
 		local hasIngredients = (
-			QBCore.Functions.HasItem('burger-meat') and 
-			QBCore.Functions.HasItem('burger-bun'))
+			QBCore.Functions.HasItem('burger-meat') and
+			QBCore.Functions.HasItem('burger-bun'))			
 
 		if hasIngredients then
 			QBCore.Functions.Progressbar("pickup_sla", "Making A Torpedo Roll..", 4000, false, true, {
@@ -298,9 +299,9 @@ AddEventHandler("qb-burgershot:MeatFree", function()
 	if onDuty then
     
 		local hasIngredients = (
-			QBCore.Functions.HasItem('burger-lettuce') and 
-			QBCore.Functions.HasItem('burger-tomato') and 
-			QBCore.Functions.HasItem('burger-bun'))
+			QBCore.Functions.HasItem('burger-lettuce') and
+			QBCore.Functions.HasItem('burger-tomato') and
+			QBCore.Functions.HasItem('burger-bun'))			
 
 		if hasIngredients then
 			QBCore.Functions.Progressbar("pickup_sla", "Making A Meat Free Burger..", 4000, false, true, {
