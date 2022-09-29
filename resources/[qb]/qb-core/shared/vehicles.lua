@@ -4879,16 +4879,6 @@ QBShared.Vehicles = {
         ['shop'] = 'pdm',
     },
 
-	['20r1'] = {
-		['name'] = 'R1',
-        ['brand'] = 'Yamaha',
-        ['model'] = '20r1',
-        ['price'] = 100000,
-        ['category'] = 'motorcycles',
-        ['hash'] = `20r1`,
-        ['shop'] = 'luxury',
-    },
-
 	['hvrod'] = {
 		['name'] = 'Fat Boy',
         ['brand'] = 'Harley Davidson',
