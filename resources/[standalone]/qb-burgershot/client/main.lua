@@ -194,8 +194,17 @@ end)
 RegisterNetEvent("qb-burgershot:MoneyShot")
 AddEventHandler("qb-burgershot:MoneyShot", function()
     if onDuty then
+		local pattyCount
+		QBCore.Functions.TriggerCallback('qb-burgershot:CheckPatties', function(patties) 
+			if patties then 
+				pattyCount = patties 
+			else 
+				pattyCount = 0 
+			end
+		end)
+
 		local hasIngredients = (
-			QBCore.Functions.HasItem('burger-meat') and
+			pattyCount >= 2 and
 			QBCore.Functions.HasItem('burger-lettuce') and
 			QBCore.Functions.HasItem('burger-tomato') and
 			QBCore.Functions.HasItem('burger-bun'))			
@@ -228,9 +237,17 @@ end)
 RegisterNetEvent("qb-burgershot:HeartStopper")
 AddEventHandler("qb-burgershot:HeartStopper", function()
     if onDuty then
-    
+		local pattyCount
+		QBCore.Functions.TriggerCallback('qb-burgershot:CheckPatties', function(patties) 
+			if patties then 
+				pattyCount = patties 
+			else 
+				pattyCount = 0 
+			end
+		end)
+
 		local hasIngredients = (
-			QBCore.Functions.HasItem('burger-meat') and
+			pattyCount >= 10 and
 			QBCore.Functions.HasItem('burger-lettuce') and
 			QBCore.Functions.HasItem('burger-tomato') and
 			QBCore.Functions.HasItem('burger-bun'))			
@@ -252,7 +269,7 @@ AddEventHandler("qb-burgershot:HeartStopper", function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
 		else
-			QBCore.Functions.Notify("You don't have the right ingredients!", "error", 5000)
+			QBCore.Functions.Notify("You don't have the right ingredients! You need 10 patties.", "error", 5000)
 		end
 
 	else
@@ -333,13 +350,25 @@ end)
 RegisterNetEvent("qb-burgershot:SoftDrink")
 AddEventHandler("qb-burgershot:SoftDrink", function()
     if onDuty then
-    QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
-        if HasItem then
-           MakeSoftDrink()
+    	--QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
+        hasItem = QBCore.Functions.HasItem('burger-sodasyrup')
+		if hasItem then
+			--TriggerServerEvent('QBCore:Server:RemoveItem', "burger-sodasyrup", 1)
+			QBCore.Functions.Progressbar("pickup", "Filling a cup..", 4000, false, true, {
+				disableMovement = true,
+				disableCarMovement = false,
+				disableMouse = false,
+				disableCombat = false,
+			})
+			Citizen.Wait(4000)
+			-- TriggerServerEvent('QBCore:Server:AddItem', "burger-softdrink", 1)
+			-- TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-softdrink"], "add")
+			TriggerServerEvent('qb-burgershot:server:makeSoftDrink')
+			QBCore.Functions.Notify("You made a Soda", "success")
         else
             QBCore.Functions.Notify("You don't have any soda syrup..", "error")
         end
-      end, 'burger-sodasyrup')
+      end)
     else
         QBCore.Functions.Notify("You must be Clocked into work", "error")
     end
@@ -347,17 +376,17 @@ end)
 
 RegisterNetEvent("qb-burgershot:mShake")
 AddEventHandler("qb-burgershot:mShake", function()
-    if onDuty then
-    QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
-        if HasItem then
-           MakeMShake()
-        else
-            QBCore.Functions.Notify("You don't have any Milkshake Formula..", "error")
-        end
-      end, 'burger-mshakeformula')
-    else
-        QBCore.Functions.Notify("You must be Clocked into work", "error")
-    end
+    -- if onDuty then
+    -- QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
+    --     if HasItem then
+    --        MakeMShake()
+    --     else
+    --         QBCore.Functions.Notify("You don't have any Milkshake Formula..", "error")
+    --     end
+    --   end, 'burger-mshakeformula')
+    -- else
+    --     QBCore.Functions.Notify("You must be Clocked into work", "error")
+    -- end
 end)
 
 RegisterNetEvent("qb-burgershot:Fries")

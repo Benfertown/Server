@@ -163,7 +163,7 @@ RegisterNetEvent('qb-burgershot:server:makeMeal-heartstopper', function()
     local xPlayer = QBCore.Functions.GetPlayer(source)
     if not xPlayer then return end
 
-    xPlayer.Functions.RemoveItem('burger-meat', 1)
+    xPlayer.Functions.RemoveItem('burger-meat', 10)
     xPlayer.Functions.RemoveItem('burger-lettuce', 1)
     xPlayer.Functions.RemoveItem('burger-tomato', 1)
     xPlayer.Functions.RemoveItem('burger-bun', 1)
@@ -189,4 +189,25 @@ RegisterNetEvent('qb-burgershot:server:makeMeal-murder', function()
     xPlayer.Functions.RemoveItem('burger-fries', 1)
     xPlayer.Functions.RemoveItem('burger-softdrink', 1)
     xPlayer.Functions.AddItem('burger-murdermeal', 1)
+end)
+
+RegisterNetEvent('qb-burgershot:server:makeSoftDrink', function()
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
+
+    xPlayer.Functions.RemoveItem('burger-sodasyrup', 1)
+    xPlayer.Functions.AddItem('burger-softdrink', 4)
+end)
+
+QBCore.Functions.CreateCallback('qb-burgershot:server:CheckPatties', function(source, cb)
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    local patties = xPlayer.Functions.GetItemByName('burger-meat')
+
+    if patties then
+        return patties.amount
+    else 
+        return 0 
+    end
 end)
