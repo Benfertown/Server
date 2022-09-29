@@ -8,6 +8,7 @@ local canSpin = false
 local weaponsPool = {
     'weapon_assaultrifle', 'weapon_combatshotgun', 'weapon_assaultsmg', 'weapon_mg',
     'weapon_heavysniper', 'weapon_advancedrifle', 'weapon_assaultshotgun', 'weapon_revolver',
+    'weapon_sawnoffshotgun',
 }
 
 local ammoPool = {

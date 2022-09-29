@@ -115,6 +115,7 @@ Config.Shops = {
         ['blipSprite'] = 326, -- Blip sprite
         ['blipColor'] = 3, -- Blip color
         ['Categories'] = {
+            ['motorcycles'] = 'Motorcycles',
             ['super'] = 'Super',
             ['sports'] = 'Sports'
         },
