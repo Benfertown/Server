@@ -194,7 +194,7 @@ end)
 RegisterNetEvent("qb-burgershot:MoneyShot")
 AddEventHandler("qb-burgershot:MoneyShot", function()
     if onDuty then
-		local pattyCount
+		local pattyCount = 0
 		QBCore.Functions.TriggerCallback('qb-burgershot:CheckPatties', function(patties) 
 			if patties then 
 				pattyCount = patties 
