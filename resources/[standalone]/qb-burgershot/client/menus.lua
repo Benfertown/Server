@@ -315,7 +315,7 @@ RegisterNetEvent('nh-context:Burgers', function()
         {
             id = 1,
             header = "• Moneyshot Burger",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
+            txt = "Bun , Cooked Patty (2), Tomato , Lettuce",
             params = {
                 event = "qb-burgershot:MoneyShot"
             }
@@ -339,7 +339,7 @@ RegisterNetEvent('nh-context:Burgers', function()
         {
             id = 4,
             header = "• The Heart Stopper",
-            txt = "Bun , Cooked Patty , Tomato , Lettuce",
+            txt = "Bun , Cooked Patty (10), Tomato , Lettuce",
             params = {
                 event = "qb-burgershot:HeartStopper"
             }

@@ -195,7 +195,7 @@ RegisterNetEvent("qb-burgershot:MoneyShot")
 AddEventHandler("qb-burgershot:MoneyShot", function()
     if onDuty then
 		
-		QBCore.Functions.TriggerCallback('qb-burgershot:server:CheckPatties_moneyshot', function(patties) 
+		QBCore.Functions.TriggerCallback('qb-burgershot:server:CheckPatties', function(patties) 
 			local pattyCount = 0
 			
 			if patties then 
@@ -228,7 +228,6 @@ AddEventHandler("qb-burgershot:MoneyShot", function()
 					end)
 			else
 				QBCore.Functions.Notify("You don't have the right ingredients!", "error", 5000)
-				QBCore.Functions.Notify("You only have " .. pattyCount .. " patty(s)", "error", 5000)
 			end
 		end)
 	else
@@ -239,40 +238,41 @@ end)
 RegisterNetEvent("qb-burgershot:HeartStopper")
 AddEventHandler("qb-burgershot:HeartStopper", function()
     if onDuty then
-		local pattyCount
-		QBCore.Functions.TriggerCallback('qb-burgershot:CheckPatties', function(patties) 
+		QBCore.Functions.TriggerCallback('qb-burgershot:server:CheckPatties', function(patties) 
+			local pattyCount = 0
+			
 			if patties then 
-				pattyCount = patties 
+				pattyCount = patties
 			else 
-				pattyCount = 0 
+				pattyCount = 0
+			end
+
+			local hasIngredients = (
+				pattyCount >= 10 and
+				QBCore.Functions.HasItem('burger-lettuce') and
+				QBCore.Functions.HasItem('burger-tomato') and
+				QBCore.Functions.HasItem('burger-bun'))			
+
+			if hasIngredients then
+				QBCore.Functions.Progressbar("pickup_sla", "Making A Heartstopper Burger..", 4000, false, true, {
+						disableMovement = true,
+						disableCarMovement = true,
+						disableMouse = false,
+						disableCombat = true,
+					}, {
+						animDict = "mp_common",
+						anim = "givetake1_a",
+						flags = 8,
+					}, {}, {}, function() -- Done
+						TriggerServerEvent('qb-burgershot:server:makeMeal-heartstopper')
+						QBCore.Functions.Notify("You made a Heartstopper Burger", "success")
+					end, function()
+						QBCore.Functions.Notify("Cancelled..", "error")
+					end)
+			else
+				QBCore.Functions.Notify("You don't have the right ingredients! You need 10 patties.", "error", 5000)
 			end
 		end)
-
-		local hasIngredients = (
-			pattyCount >= 10 and
-			QBCore.Functions.HasItem('burger-lettuce') and
-			QBCore.Functions.HasItem('burger-tomato') and
-			QBCore.Functions.HasItem('burger-bun'))			
-
-		if hasIngredients then
-			QBCore.Functions.Progressbar("pickup_sla", "Making A Heartstopper Burger..", 4000, false, true, {
-					disableMovement = true,
-					disableCarMovement = true,
-					disableMouse = false,
-					disableCombat = true,
-				}, {
-					animDict = "mp_common",
-					anim = "givetake1_a",
-					flags = 8,
-				}, {}, {}, function() -- Done
-					TriggerServerEvent('qb-burgershot:server:makeMeal-heartstopper')
-					QBCore.Functions.Notify("You made a Heartstopper Burger", "success")
-				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
-				end)
-		else
-			QBCore.Functions.Notify("You don't have the right ingredients! You need 10 patties.", "error", 5000)
-		end
 
 	else
 		QBCore.Functions.Notify("You're not clocked in...", "error", 5000)
