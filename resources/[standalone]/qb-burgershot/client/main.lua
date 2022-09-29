@@ -381,27 +381,17 @@ AddEventHandler("qb-burgershot:PattyFry", function()
 
 		if hasPatty then
 			MakePatty()
+		else
+			QBCore.Functions.Notify("You don't have any patties!", "error", 5000)
 		end
 
-		-- QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
-    -- local hasItem = QBCore.Functions.hasitem('burger-raw')
-	-- if hasItem then
-    --        MakePatty()
-    --     else
-    --         QBCore.Functions.Notify("You don't have any raw patties..", "error", 5000)
-    --     end
-    --   end, 'burger-raw')
-    -- else
-    --     QBCore.Functions.Notify("You must be Clocked into work", "error", 5000)
-    -- end
 	else
-		QBCore.Functions.Notify("You must be Clocked into work", "error", 5000)
+		QBCore.Functions.Notify("You're not clocked in...", "error", 5000)
 	end
 end)
 
 -- Functions --
 function MakeFries()
-	TriggerServerEvent('QBCore:Server:RemoveItem', "burger-potato", 1)
 	QBCore.Functions.Progressbar("pickup", "Frying the fries..", 4000, false, true, {
 	    disableMovement = true,
 	    disableCarMovement = true,
@@ -419,10 +409,10 @@ function MakeFries()
 	    }
 	)
 	Citizen.Wait(4000)
-	TriggerServerEvent('QBCore:Server:AddItem', "burger-fries", 4)
-	TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-fries"], "add")
+
+	TriggerServerEvent('qb-burgershot:server:cookFries') -- cook the fries
 	QBCore.Functions.Notify("You made 4 fries", "success")
-	StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
+	StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0) -- stop animating
 end
 
 

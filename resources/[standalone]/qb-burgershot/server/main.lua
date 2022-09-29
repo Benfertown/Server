@@ -100,16 +100,25 @@ end)
 -- end)
 
 RegisterNetEvent('make-murdermeal', function()
-
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
 end)
 
 RegisterNetEvent('qb-burgershot:server:cookPatty', function()
-
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
-
     if not xPlayer then return end
 
     xPlayer.Functions.RemoveItem('burger-raw', 1)
     xPlayer.Functions.AddItem('burger-meat', 1)
+end)
+
+RegisterNetEvent('qb-burgershot:server:cookFries', function() 
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
+
+    xPlayer.Functions.RemoveItem('burger-potato', 1)
+    xPlayer.Functions.AddItem('burger-fries', 1)
 end)
