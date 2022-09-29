@@ -227,6 +227,7 @@ AddEventHandler("qb-burgershot:MoneyShot", function()
 				end)
 		else
 			QBCore.Functions.Notify("You don't have the right ingredients!", "error", 5000)
+			QBCore.Functions.Notify("You only have " .. pattyCount .. " patty(s)", "error", 5000)
 		end
 
 	else
