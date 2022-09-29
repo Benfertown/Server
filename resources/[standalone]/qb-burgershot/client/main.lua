@@ -194,9 +194,13 @@ end)
 RegisterNetEvent("qb-burgershot:MoneyShot")
 AddEventHandler("qb-burgershot:MoneyShot", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-burgershot:server:get:ingredientBurger', function(HasItems)  
-    		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making Burgers..", 4000, false, true, {
+		local hasIngredients = (
+			QBCore.Functions.HasItems(
+				'burger-meat', 'burger-lettuce', 
+				'burger-tomato', 'burger-bun'))
+
+		if hasIngredients then
+			QBCore.Functions.Progressbar("pickup_sla", "Making A Bleeder Burger..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -206,31 +210,32 @@ AddEventHandler("qb-burgershot:MoneyShot", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-meat", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-lettuce", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-bun", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-tomato", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "burger-moneyshot", 1)
-                    			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-moneyshot"], "add")
-                    			QBCore.Functions.Notify("You made a MoneyShot Burger", "success")
+					TriggerServerEvent('qb-burgershot:server:makeMeal-bleeder')
+					QBCore.Functions.Notify("You made a Bleeder Burger", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
-			else
-   				QBCore.Functions.Notify("You dont have the ingredients to make this", "error")
-			end
-		end)
-	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		else
+			QBCore.Functions.Notify("You don't have the right ingredients!", "error", 5000)
+		end
+
+	else
+		QBCore.Functions.Notify("You're not clocked in...", "error", 5000)
 	end
 end)
 
 RegisterNetEvent("qb-burgershot:HeartStopper")
 AddEventHandler("qb-burgershot:HeartStopper", function()
     if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-burgershot:server:get:ingredientBurger', function(HasItems)  
-    		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making Burgers..", 4000, false, true, {
+    
+		local hasIngredients = (
+			QBCore.Functions.HasItem('burger-meat') and 
+			QBCore.Functions.HasItem('burger-lettuce') and 
+			QBCore.Functions.HasItem('burger-tomato') and 
+			QBCore.Functions.HasItem('burger-bun'))
+
+		if hasIngredients then
+			QBCore.Functions.Progressbar("pickup_sla", "Making A Heartstopper Burger..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -240,32 +245,31 @@ AddEventHandler("qb-burgershot:HeartStopper", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-meat", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-lettuce", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-bun", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-tomato", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "burger-heartstopper", 1)
-                    			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-heartstopper"], "add")
-                    			QBCore.Functions.Notify("You made a Heart Stopper", "success")
+					TriggerServerEvent('qb-burgershot:server:makeMeal-heartstopper')
+					QBCore.Functions.Notify("You made a Heartstopper Burger", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
-			else
-   				QBCore.Functions.Notify("You dont have the ingredients to make this", "error")
-			end
-		end)
-	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
+		else
+			QBCore.Functions.Notify("You don't have the right ingredients!", "error", 5000)
+		end
+
+	else
+		QBCore.Functions.Notify("You're not clocked in...", "error", 5000)
 	end
 end)
 
 
 RegisterNetEvent("qb-burgershot:Torpedo")
 AddEventHandler("qb-burgershot:Torpedo", function()
-    if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-burgershot:server:get:ingredientTorpedo', function(HasItems)  
-    		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making A Torpedo..", 4000, false, true, {
+	if onDuty then
+    
+		local hasIngredients = (
+			QBCore.Functions.HasItem('burger-meat') and 
+			QBCore.Functions.HasItem('burger-bun'))
+
+		if hasIngredients then
+			QBCore.Functions.Progressbar("pickup_sla", "Making A Torpedo Roll..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -275,21 +279,18 @@ AddEventHandler("qb-burgershot:Torpedo", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-meat", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-bun", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "burger-torpedo", 1)
-                    			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-torpedo"], "add")
-                    			QBCore.Functions.Notify("You made a Torpedo Roll", "success")
+					TriggerServerEvent('qb-burgershot:server:makeMeal-torpedo')
+					QBCore.Functions.Notify("You made a Torpedo Roll", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
-			else
-   				QBCore.Functions.Notify("You dont have the ingredients to make this", "error")
-			end
-		end)
-	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
-	end  
+		else
+			QBCore.Functions.Notify("You don't have the right ingredients!", "error", 5000)
+		end
+
+	else
+		QBCore.Functions.Notify("You're not clocked in...", "error", 5000)
+	end
 end)
 
 RegisterNetEvent("qb-burgershot:MeatFree")
@@ -324,35 +325,6 @@ AddEventHandler("qb-burgershot:MeatFree", function()
 	else
 		QBCore.Functions.Notify("You're not clocked in...", "error", 5000)
 	end
-    -- if onDuty then
-    -- 	QBCore.Functions.TriggerCallback('qb-burgershot:server:get:ingredientMeatfree', function(HasItems)  
-    -- 		if HasItems then
-	-- 			QBCore.Functions.Progressbar("pickup_sla", "Making A Meat Free Burger..", 4000, false, true, {
-	-- 				disableMovement = true,
-	-- 				disableCarMovement = true,
-	-- 				disableMouse = false,
-	-- 				disableCombat = true,
-	-- 			}, {
-	-- 				animDict = "mp_common",
-	-- 				anim = "givetake1_a",
-	-- 				flags = 8,
-	-- 			}, {}, {}, function() -- Done
-	-- 				TriggerServerEvent('QBCore:Server:RemoveItem', "burger-tomato", 1)
-    --                 			TriggerServerEvent('QBCore:Server:RemoveItem', "burger-lettuce", 1)
-	-- 				TriggerServerEvent('QBCore:Server:RemoveItem', "burger-bun", 1)
-	-- 				TriggerServerEvent('QBCore:Server:AddItem', "burger-meatfree", 1)
-    --                 			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-meatfree"], "add")
-    --                			QBCore.Functions.Notify("You made a Meat Free Burger", "success")
-	-- 			end, function()
-	-- 				QBCore.Functions.Notify("Cancelled..", "error")
-	-- 			end)
-	-- 		else
-   	-- 			QBCore.Functions.Notify("You dont have the ingredients to make this", "error")
-	-- 		end
-	-- 	end)
-	-- else 
-	-- 	QBCore.Functions.Notify("You must be Clocked into work", "error")
-	-- end  
 end)
 
 
