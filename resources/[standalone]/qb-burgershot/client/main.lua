@@ -419,8 +419,9 @@ function MakePatty()
 	-- local src = source
 	-- local Player = QBCore.Functions.GetPlayer(src)
     
-	TriggerServerEvent('QBCore:Server:RemoveItem', "burger-raw", 1)
-    
+	--TriggerServerEvent('QBCore:Server:RemoveItem', "burger-raw", 1)
+    TriggerServerEvent('qb-burgershot:server:cookPatty')
+
 	QBCore.Functions.Progressbar("pickup", "Cooking the Patty..", 4000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
