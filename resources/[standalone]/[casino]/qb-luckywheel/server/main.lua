@@ -5,6 +5,16 @@ local car = false
 local cooldowns = {}
 local canSpin = false
 
+local weaponsPool = {
+    'weapon_assaultrifle', 'weapon_combatshotgun', 'weapon_assaultsmg', 'weapon_mg',
+    'weapon_heavysniper', 'weapon_advancedrifle', 'weapon_assaultshotgun', 'weapon_revolver',
+}
+
+local ammoPool = {
+    'pistol_ammo', 'rifle_ammo', 'smg_ammo',
+    'shotgun_ammo', 'mg_ammo', 'snp_ammo'
+}
+
 QBCore.Functions.CreateCallback('qb-luckywheel:CheckCanSpin', function(source, cb)
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
@@ -13,12 +23,12 @@ QBCore.Functions.CreateCallback('qb-luckywheel:CheckCanSpin', function(source, c
     local checkTime
 
     if(cooldowns[xPlayer.PlayerData.citizenid]) == nil then
-        checkTime = 900
+        checkTime = 3600
     else
         checkTime = (os.time() - cooldowns[xPlayer.PlayerData.citizenid])
     end
 
-    if checkTime >= 900 then
+    if checkTime >= 3600 then
         if chips and chips.amount >= Config.Amount and isRoll == false then
             cb(0) -- player can spin
         else
@@ -64,7 +74,7 @@ RegisterNetEvent('qb-luckywheel:server:getLucky', function()
                         _priceIndex = 7
                     end
                 elseif _randomPrice > 6 and _randomPrice <= 15 then
-                    -- Black money
+                    -- Hacker stuff
                     -- 4, 8, 11, 16
                     local _sRan = math.random(1, 4)
                     if _sRan == 1 then
@@ -78,7 +88,6 @@ RegisterNetEvent('qb-luckywheel:server:getLucky', function()
                     end
                 elseif _randomPrice > 15 and _randomPrice <= 25 then
                     -- Win 300,000$
-                    -- _priceIndex = 5
                     local _subRan = math.random(1,20)
                     if _subRan <= 2 then
                         _priceIndex = 5
@@ -114,56 +123,59 @@ RegisterNetEvent('qb-luckywheel:server:getLucky', function()
                     _priceIndex = _itemList[math.random(1, 4)]
                 end
 
-                -- -- development reasons
-                -- _priceIndex = 19
-
                 SetTimeout(6000, function()
                     isRoll = false
                     -- Give Price
                     if _priceIndex == 1 or _priceIndex == 9 or _priceIndex == 13 or _priceIndex == 17 then
                         xPlayer.Functions.AddItem('casino_whitechip', 25000)
                         TriggerClientEvent('QBCore:Notify', source, 'You Won 25,000 Casino Chips!', 'success')
+                    
                     elseif _priceIndex == 2 or _priceIndex == 6 or _priceIndex == 10 or _priceIndex == 14 or _priceIndex == 18 then
-                        xPlayer.Functions.AddItem('sandwich', 10)
-                        xPlayer.Functions.AddItem('water_bottle', 24)
+                        xPlayer.Functions.AddItem('sandwich', 5)
+                        xPlayer.Functions.AddItem('water_bottle', 5)
                         TriggerClientEvent('QBCore:Notify', source, 'You Won....Sandwich and Water?', 'success')
-                    elseif _priceIndex == 3 or _priceIndex == 7 or _priceIndex == 15 or _priceIndex == 20 then
+                    
+                    elseif _priceIndex == 3 or _priceIndex == 7 or _priceIndex == 15 then
                         local _money = 0
                         if _priceIndex == 3 then
-                            _money = 20000
+                            _money = 5000
                         elseif _priceIndex == 7 then
-                            _money = 30000
+                            _money = 10000
                         elseif _priceIndex == 15 then
-                            _money = 40000
-                        elseif _priceIndex == 20 then
-                            _money = 50000
+                            _money = 20000
                         end
                         xPlayer.Functions.AddMoney('cash', _money)
                         TriggerClientEvent('QBCore:Notify', source, 'You Won $'.._money..'!', 'success')
+                    
+                    elseif _priceIndex == 20 then
+                        local ammo = ammoPool[math.random( # ammoPool)]
+                        xPlayer.Functions.AddItem(ammo, 20)
+                        TriggerClientEvent('QBCore:Notify', source, 'You Won Ammunition!', 'success')
+                    
                     elseif _priceIndex == 4 or _priceIndex == 8 or _priceIndex == 11 or _priceIndex == 16 then
-                        local _blackMoney = 0
+                        local amount = 0
                         if _priceIndex == 4 then
-                            _blackMoney = 10000
+                            amount = 1
                         elseif _priceIndex == 8 then
-                            _blackMoney = 15000
+                            amount = 2
                         elseif _priceIndex == 11 then
-                            _blackMoney = 20000
+                            amount = 3
                         elseif _priceIndex == 16 then
-                            _blackMoney = 25000
+                            amount = 4
                         end
-                        local info = {
-                            worth = math.random(5000, 10000)
-                        }
-                        -- xPlayer.Functions.AddItem('markedbills', math.random(2,3), false, info)
-                        xPlayer.Functions.AddItem('trojan_usb', 10)
-                        xPlayer.Functions.AddItem('electronickit', 10)
+                        xPlayer.Functions.AddItem('trojan_usb', amount)
+                        xPlayer.Functions.AddItem('electronickit', amount)
                         TriggerClientEvent('QBCore:Notify', source, 'You Won WATCH_DOGS Starter kit!', 'success')
+                    
                     elseif _priceIndex == 5 then
                         xPlayer.Functions.AddMoney('cash', 300000)
                         TriggerClientEvent('QBCore:Notify', source, 'You Won $300,000 Cash!', 'success')
+                    
                     elseif _priceIndex == 12 then
-                        xPlayer.Functions.AddItem('weapon_pistol50', 1)
-                        TriggerClientEvent('QBCore:Notify', source, 'You Won A .50 Pistol!', 'success')
+                        local weapon = weaponsPool[math.random( # weaponsPool )]
+                        xPlayer.Functions.AddItem(weapon, 1)
+                        TriggerClientEvent('QBCore:Notify', source, 'Whoa, a gun!', 'success')
+                    
                     elseif _priceIndex == 19 then
                         if Config.GiveCarOnWin then 
                             TriggerClientEvent('qb-luckywheel:client:winCar', source)

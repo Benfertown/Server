@@ -4866,7 +4866,37 @@ QBShared.Vehicles = {
         ['price'] = 80000,
         ['category'] = 'motorcycles',
         ['hash'] = `ninjah2`,
+        ['shop'] = 'luxury',
+    },
+
+	['g_xlcr'] = {
+		['name'] = 'XLCR',
+        ['brand'] = 'Harley Davidson',
+        ['model'] = 'g_xlcr',
+        ['price'] = 20000,
+        ['category'] = 'motorcycles',
+        ['hash'] = `g_xlcr`,
         ['shop'] = 'pdm',
+    },
+
+	['20r1'] = {
+		['name'] = 'R1',
+        ['brand'] = 'Yamaha',
+        ['model'] = '20r1',
+        ['price'] = 100000,
+        ['category'] = 'motorcycles',
+        ['hash'] = `20r1`,
+        ['shop'] = 'luxury',
+    },
+
+	['hvrod'] = {
+		['name'] = 'Fat Boy',
+        ['brand'] = 'Harley Davidson',
+        ['model'] = 'hvrod',
+        ['price'] = 40000,
+        ['category'] = 'motorcycles',
+        ['hash'] = `hvrod`,
+        ['shop'] = 'luxury',
     },
 
 	

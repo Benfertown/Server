@@ -5,7 +5,7 @@ Config = Config or {}
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
 
 Config.MinZOffset = 40
-Config.TakeoverPrice = 5000
+Config.TakeoverPrice = 0
 Config.TrapHouses = {
     [1] = {
         coords = {
@@ -112,6 +112,11 @@ Config.AllowedItems = {
     },
     ["weed_brick"] = {
         name = "weed_brick",
+        wait = 5000,
+        reward = 250,
+    },
+    ["coke_brick"] = {
+        name = "coke_brick",
         wait = 5000,
         reward = 250,
     },

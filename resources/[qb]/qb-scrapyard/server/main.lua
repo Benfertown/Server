@@ -27,7 +27,7 @@ end)
 RegisterNetEvent('qb-scrapyard:server:ScrapVehicle', function(listKey)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    if Config.CurrentVehicles[listKey] ~= nil then
+    --if Config.CurrentVehicles[listKey] ~= nil then
         for _ = 1, math.random(2, 4), 1 do
             local item = Config.Items[math.random(1, #Config.Items)]
             Player.Functions.AddItem(item, math.random(25, 45))
@@ -42,30 +42,30 @@ RegisterNetEvent('qb-scrapyard:server:ScrapVehicle', function(listKey)
             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["rubber"], 'add')
 
         end
-        Config.CurrentVehicles[listKey] = nil
-        TriggerClientEvent("qb-scapyard:client:setNewVehicles", -1, Config.CurrentVehicles)
-    end
+        --Config.CurrentVehicles[listKey] = nil
+        --TriggerClientEvent("qb-scapyard:client:setNewVehicles", -1, Config.CurrentVehicles)
+    --end
 end)
 
-function GenerateVehicleList()
-    Config.CurrentVehicles = {}
-    for i = 1, 40, 1 do
-        local randVehicle = Config.Vehicles[math.random(1, #Config.Vehicles)]
-        if not IsInList(randVehicle) then
-            Config.CurrentVehicles[i] = randVehicle
-        end
-    end
-    TriggerClientEvent("qb-scapyard:client:setNewVehicles", -1, Config.CurrentVehicles)
-end
+-- function GenerateVehicleList()
+--     Config.CurrentVehicles = {}
+--     for i = 1, 40, 1 do
+--         local randVehicle = Config.Vehicles[math.random(1, #Config.Vehicles)]
+--         if not IsInList(randVehicle) then
+--             Config.CurrentVehicles[i] = randVehicle
+--         end
+--     end
+--     TriggerClientEvent("qb-scapyard:client:setNewVehicles", -1, Config.CurrentVehicles)
+-- end
 
-function IsInList(name)
-    local retval = false
-    if Config.CurrentVehicles ~= nil and next(Config.CurrentVehicles) ~= nil then
-        for k in pairs(Config.CurrentVehicles) do
-            if Config.CurrentVehicles[k] == name then
-                retval = true
-            end
-        end
-    end
-    return retval
-end
+-- function IsInList(name)
+--     local retval = false
+--     if Config.CurrentVehicles ~= nil and next(Config.CurrentVehicles) ~= nil then
+--         for k in pairs(Config.CurrentVehicles) do
+--             if Config.CurrentVehicles[k] == name then
+--                 retval = true
+--             end
+--         end
+--     end
+--     return retval
+-- end

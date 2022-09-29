@@ -274,7 +274,7 @@ function doRoll()
             elseif canSpin == 1 then
                 TriggerEvent('QBCore:Notify', 'You Need '..Config.Amount..' White Chips To Spin!', 'error')
             else
-                TriggerEvent('QBCore:Notify', 'You have spun the wheel too recently! Come back later.', 'error')
+                TriggerEvent('QBCore:Notify', 'You have spun the wheel too recently! Come back in one hour.', 'error')
             end
         end)
     end
