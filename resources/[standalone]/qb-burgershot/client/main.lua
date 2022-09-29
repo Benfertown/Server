@@ -377,10 +377,11 @@ RegisterNetEvent("qb-burgershot:PattyFry")
 AddEventHandler("qb-burgershot:PattyFry", function()
     if onDuty then
     
-	local hasPatty = QBCore.Functions.HasItem('burger-raw')
+		local hasPatty = QBCore.Functions.HasItem('burger-raw')
 
-	if hasPatty then
-		MakePatty()
+		if hasPatty then
+			MakePatty()
+		end
 
 		-- QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
     -- local hasItem = QBCore.Functions.hasitem('burger-raw')
@@ -393,6 +394,8 @@ AddEventHandler("qb-burgershot:PattyFry", function()
     -- else
     --     QBCore.Functions.Notify("You must be Clocked into work", "error", 5000)
     -- end
+	else
+		QBCore.Functions.Notify("You must be Clocked into work", "error", 5000)
 	end
 end)
 
@@ -424,7 +427,7 @@ end
 
 
 function MakePatty()
-	
+
 	QBCore.Functions.Progressbar("pickup", "Cooking the Patty..", 4000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
