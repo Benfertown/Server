@@ -122,3 +122,71 @@ RegisterNetEvent('qb-burgershot:server:cookFries', function()
     xPlayer.Functions.RemoveItem('burger-potato', 1)
     xPlayer.Functions.AddItem('burger-fries', 4)
 end)
+
+RegisterNetEvent('qb-burgershot:server:makeMeal-moneyshot', function()
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
+
+    xPlayer.Functions.RemoveItem('burger-meat', 1)
+    xPlayer.Functions.RemoveItem('burger-lettuce', 1)
+    xPlayer.Functions.RemoveItem('burger-tomato', 1)
+    xPlayer.Functions.RemoveItem('burger-bun', 1)
+    xPlayer.Functions.AddItem('burger-moneyshot', 1)
+end)
+
+RegisterNetEvent('qb-burgershot:server:makeMeal-meatfree', function()
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
+
+    xPlayer.Functions.RemoveItem('burger-lettuce', 1)
+    xPlayer.Functions.RemoveItem('burger-tomato', 1)
+    xPlayer.Functions.RemoveItem('burger-bun', 1)
+    xPlayer.Functions.AddItem('burger-meatfree', 1)
+end)
+
+RegisterNetEvent('qb-burgershot:server:makeMeal-bleeder', function()
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
+
+    xPlayer.Functions.RemoveItem('burger-meat', 1)
+    xPlayer.Functions.RemoveItem('burger-lettuce', 1)
+    xPlayer.Functions.RemoveItem('burger-tomato', 1)
+    xPlayer.Functions.RemoveItem('burger-bun', 1)
+    xPlayer.Functions.AddItem('burger-bleeder', 1)
+end)
+
+RegisterNetEvent('qb-burgershot:server:makeMeal-heartstopper', function()
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
+
+    xPlayer.Functions.RemoveItem('burger-meat', 1)
+    xPlayer.Functions.RemoveItem('burger-lettuce', 1)
+    xPlayer.Functions.RemoveItem('burger-tomato', 1)
+    xPlayer.Functions.RemoveItem('burger-bun', 1)
+    xPlayer.Functions.AddItem('burger-heartstopper', 1)
+end)
+
+RegisterNetEvent('qb-burgershot:server:makeMeal-torpedo', function()
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
+
+    xPlayer.Functions.RemoveItem('burger-meat', 1)
+    xPlayer.Functions.RemoveItem('burger-bun', 1)
+    xPlayer.Functions.AddItem('burger-torpedo', 1)
+end)
+
+RegisterNetEvent('qb-burgershot:server:makeMeal-murder', function()
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
+
+    xPlayer.Functions.RemoveItem('burger-heartstopper', 1)
+    xPlayer.Functions.RemoveItem('burger-fries', 1)
+    xPlayer.Functions.RemoveItem('burger-softdrink', 1)
+    xPlayer.Functions.AddItem('burger-murdermeal', 1)
+end)
