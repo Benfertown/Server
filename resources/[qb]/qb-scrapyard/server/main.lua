@@ -1,11 +1,11 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 CreateThread(function()
-    while true do
-        Wait(1000)
-        GenerateVehicleList()
-        Wait((1000 * 60) * 60)
-    end
+    -- while true do
+    --     Wait(1000)
+    --     --GenerateVehicleList()
+    --     Wait((1000 * 60) * 60)
+    -- end
 end)
 
 RegisterNetEvent('qb-scrapyard:server:LoadVehicleList', function()
