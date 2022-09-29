@@ -188,13 +188,13 @@ end
 
 function IsVehicleValid(vehicleModel)
     local retval = false
-    if Config.CurrentVehicles ~= nil and next(Config.CurrentVehicles) ~= nil then
-        for k in pairs(Config.CurrentVehicles) do
-            if Config.CurrentVehicles[k] ~= nil and GetHashKey(Config.CurrentVehicles[k]) == vehicleModel then
+    --if Config.CurrentVehicles ~= nil and next(Config.CurrentVehicles) ~= nil then
+        for k in pairs(Config.Vehicles) do
+            if Config.Vehicles[k] ~= nil and GetHashKey(Config.Vehicles[k]) == vehicleModel then
                 retval = true
             end
         end
-    end
+   --end
     return retval
 end
 
