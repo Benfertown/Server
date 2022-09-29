@@ -93,14 +93,16 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:get:ingredientMurderMeal',
     end
 end)
 
-QBCore.Functions.CreateUseableItem("burger-murdermeal", function(source, item)
+-- QBCore.Functions.CreateUseableItem("burger-murdermeal", function(source, item)
     
-    local Player = QBCore.Functions.GetPlayer(source)
-    TriggerClientEvent("qb-burgershot:MurderMeal", source, item.name)
-end)
+--     local Player = QBCore.Functions.GetPlayer(source)
+--     TriggerClientEvent("qb-burgershot:MurderMeal", source, item.name)
+-- end)
+
+RegisterNetEvent('make-murdermeal', function()
+)
 
 RegisterNetEvent('qb-burgershot:server:cookPatty', function()
-    TriggerEvent('chat:addMessage', { args = { 'test' }})
 
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
@@ -108,7 +110,5 @@ RegisterNetEvent('qb-burgershot:server:cookPatty', function()
     if not xPlayer then return end
     
     xPlayer.Functions.RemoveItem('burger-raw', 1)
-    --TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["burger-raw"], "remove")
     xPlayer.Functions.AddItem('burger-meat', 1)
-    --TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["burger-meat"], "add")
 end)

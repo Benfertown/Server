@@ -376,16 +376,24 @@ end)
 RegisterNetEvent("qb-burgershot:PattyFry")
 AddEventHandler("qb-burgershot:PattyFry", function()
     if onDuty then
-    QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
-        if HasItem then
-           MakePatty()
-        else
-            QBCore.Functions.Notify("You don't have any raw patties..", "error", 5000)
-        end
-      end, 'burger-raw')
-    else
-        QBCore.Functions.Notify("You must be Clocked into work", "error", 5000)
-    end
+    
+	local hasPatty = QBCore.Functions.HasItem('burger-raw')
+
+	if hasPatty then
+		MakePatty()
+
+		-- QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
+    -- local hasItem = QBCore.Functions.hasitem('burger-raw')
+	-- if hasItem then
+    --        MakePatty()
+    --     else
+    --         QBCore.Functions.Notify("You don't have any raw patties..", "error", 5000)
+    --     end
+    --   end, 'burger-raw')
+    -- else
+    --     QBCore.Functions.Notify("You must be Clocked into work", "error", 5000)
+    -- end
+	end
 end)
 
 -- Functions --
@@ -416,12 +424,7 @@ end
 
 
 function MakePatty()
-	-- local src = source
-	-- local Player = QBCore.Functions.GetPlayer(src)
-    
-	--TriggerServerEvent('QBCore:Server:RemoveItem', "burger-raw", 1)
-    TriggerServerEvent('qb-burgershot:server:cookPatty')
-
+	
 	QBCore.Functions.Progressbar("pickup", "Cooking the Patty..", 4000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -439,9 +442,8 @@ function MakePatty()
     }    
 )
     Citizen.Wait(4000)
-    -- Player.Functions.AddItem('burger-meat', 1)
-	TriggerServerEvent('QBCore:Server:AddItem', "burger-meat", 1)
-    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-meat"], "add")
+
+	TriggerServerEvent('qb-burgershot:server:cookPatty')
     QBCore.Functions.Notify("You cooked the meat", "success")
     StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
 end
