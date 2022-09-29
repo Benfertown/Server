@@ -206,8 +206,8 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:CheckPatties', function(so
     local patties = xPlayer.Functions.GetItemByName('burger-meat')
 
     if patties then
-        return patties.amount
+        cb(patties.amount)
     else 
-        return 0 
+        cb(0) 
     end
 end)
