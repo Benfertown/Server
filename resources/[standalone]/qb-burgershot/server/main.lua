@@ -207,7 +207,7 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:CheckPatties_moneyshot', f
     local pattyCount = 0
 
     if patties then
-        if patties >= 2 then
+        if patties.amount >= 2 then
             cb(true)
         end
     else
