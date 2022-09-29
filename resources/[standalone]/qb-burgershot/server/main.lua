@@ -200,16 +200,17 @@ RegisterNetEvent('qb-burgershot:server:makeSoftDrink', function()
     xPlayer.Functions.AddItem('burger-softdrink', 4)
 end)
 
-QBCore.Functions.CreateCallback('qb-burgershot:server:CheckPatties', function(source, cb)
+QBCore.Functions.CreateCallback('qb-burgershot:server:CheckPatties_moneyshot', function(source, cb)
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
     local patties = xPlayer.Functions.GetItemByName('burger-meat')
     local pattyCount = 0
 
     if patties then
-        pattyCount = patties.amount
-        cb(pattyCount)
-    else 
-        cb(0) 
+        if patties >= 2 then
+            cb(true)
+        end
+    else
+        cb(false)
     end
 end)
