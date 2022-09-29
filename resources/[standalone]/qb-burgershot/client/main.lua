@@ -140,11 +140,11 @@ AddEventHandler("qb-burgershot:CreateMurderMeal", function()
 					flags = 8,
 				}, {}, {}, function() -- Done
 					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-fries", 1)
-                    			TriggerServerEvent('QBCore:Server:RemoveItem', "burger-heartstopper", 1)
+                    TriggerServerEvent('QBCore:Server:RemoveItem', "burger-heartstopper", 1)
 					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-softdrink", 1)
 					TriggerServerEvent('QBCore:Server:AddItem', "burger-murdermeal", 1)
-                    			TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-murdermeal"], "add")
-                    			QBCore.Functions.Notify("You made a A Murder Meal", "success")
+                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-murdermeal"], "add")
+                    QBCore.Functions.Notify("You made a A Murder Meal", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
@@ -352,10 +352,8 @@ end)
 RegisterNetEvent("qb-burgershot:SoftDrink")
 AddEventHandler("qb-burgershot:SoftDrink", function()
     if onDuty then
-    	--QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
-        hasItem = QBCore.Functions.HasItem('burger-sodasyrup')
+    	hasItem = QBCore.Functions.HasItem('burger-sodasyrup')
 		if hasItem then
-			--TriggerServerEvent('QBCore:Server:RemoveItem', "burger-sodasyrup", 1)
 			QBCore.Functions.Progressbar("pickup", "Filling a cup..", 4000, false, true, {
 				disableMovement = true,
 				disableCarMovement = false,
@@ -363,10 +361,8 @@ AddEventHandler("qb-burgershot:SoftDrink", function()
 				disableCombat = false,
 			})
 			Citizen.Wait(4000)
-			-- TriggerServerEvent('QBCore:Server:AddItem', "burger-softdrink", 1)
-			-- TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-softdrink"], "add")
 			TriggerServerEvent('qb-burgershot:server:makeSoftDrink')
-			QBCore.Functions.Notify("You made a Soda", "success")
+			QBCore.Functions.Notify("You made some sodas", "success")
         else
             QBCore.Functions.Notify("You don't have any soda syrup..", "error")
         end
@@ -377,17 +373,24 @@ end)
 
 RegisterNetEvent("qb-burgershot:mShake")
 AddEventHandler("qb-burgershot:mShake", function()
-    -- if onDuty then
-    -- QBCore.Functions.TriggerCallback('QBCore:HasItem', function(HasItem)
-    --     if HasItem then
-    --        MakeMShake()
-    --     else
-    --         QBCore.Functions.Notify("You don't have any Milkshake Formula..", "error")
-    --     end
-    --   end, 'burger-mshakeformula')
-    -- else
-    --     QBCore.Functions.Notify("You must be Clocked into work", "error")
-    -- end
+    if onDuty then
+    	hasItem = QBCore.Functions.HasItem('burger-mshakeformula')
+		if hasItem then
+			QBCore.Functions.Progressbar("pickup", "Filling a cup..", 4000, false, true, {
+				disableMovement = true,
+				disableCarMovement = false,
+				disableMouse = false,
+				disableCombat = false,
+			})
+			Citizen.Wait(4000)
+			TriggerServerEvent('qb-burgershot:server:makeMilkshake')
+			QBCore.Functions.Notify("You made some shakes", "success")
+        else
+            QBCore.Functions.Notify("You don't have any shake formula..", "error")
+        end
+    else
+        QBCore.Functions.Notify("You must be Clocked into work", "error")
+    end
 end)
 
 RegisterNetEvent("qb-burgershot:Fries")

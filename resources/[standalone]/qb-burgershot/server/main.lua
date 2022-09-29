@@ -200,6 +200,15 @@ RegisterNetEvent('qb-burgershot:server:makeSoftDrink', function()
     xPlayer.Functions.AddItem('burger-softdrink', 4)
 end)
 
+RegisterNetEvent('qb-burgershot:server:makeMilkshake', function()
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
+
+    xPlayer.Functions.RemoveItem('burger-mshakeformula', 1)
+    xPlayer.Functions.AddItem('burger-mshake', 2)
+end)
+
 QBCore.Functions.CreateCallback('qb-burgershot:server:CheckPatties', function(source, cb)
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
