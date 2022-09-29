@@ -154,7 +154,7 @@ function ScrapVehicle()
                 if IsVehicleValid(GetEntityModel(vehicle)) then
                     local vehiclePlate = QBCore.Functions.GetPlate(vehicle)
                     QBCore.Functions.TriggerCallback('qb-scrapyard:checkOwnerVehicle',function(retval)
-                        if retval then
+                        if not retval then
                             isBusy = true
                             local scrapTime = math.random(28000, 37000)
                             ScrapVehicleAnim(scrapTime)
