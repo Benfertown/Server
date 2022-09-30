@@ -353,14 +353,19 @@ QBCore.Functions.CreateUseableItem("burger-fries", function(source, item)
 end)
 
 QBCore.Functions.CreateUseableItem("burger-murdermeal", function(source, item)
+    -- local Player = QBCore.Functions.GetPlayer(source)
+	-- if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+    --     QBCore.Functions.TriggerCallback("qb-burgershot:server:openMealBox", function(toy)
+	-- 		if toy then
+	-- 			QBCore.Functions.Notify("You got a toy!", "success")
+	-- 		else
+	-- 			QBCore.Functions.Notify("No toy this time. :(", "error")
+	-- 		end
+	-- 	end)
+    -- end
+
     local Player = QBCore.Functions.GetPlayer(source)
 	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        QBCore.Functions.TriggerCallback("qb-burgershot:server:openMealBox", function(toy)
-			if toy then
-				QBCore.Functions.Notify("You got a toy!", "success")
-			else
-				QBCore.Functions.Notify("No toy this time. :(", "error")
-			end
-		end)
+        TriggerClientEvent("qb-burgershot:MurderMeal", source, item.name)
     end
 end)

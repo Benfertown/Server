@@ -212,7 +212,6 @@ end)
 QBCore.Functions.CreateCallback('qb-burgershot:server:openMealBox', function(source, cb)
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
-    local patties = xPlayer.Functions.GetItemByName('burger-meat')
 
     xPlayer.Functions.AddItem('burger-heartstopper')
     xPlayer.Functions.AddItem('burger-fries')
@@ -220,7 +219,7 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:openMealBox', function(sou
 
     local getToy = math.random(1, 10)
 
-    if getToy < 4 then
+    if getToy > 4 then
         cb(false)
     else
         local toy = math.random(1, 2)
