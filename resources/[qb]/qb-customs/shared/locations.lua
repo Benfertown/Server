@@ -225,7 +225,7 @@ Config.Locations = {
             allowedClasses = { 18 },
         },
         zones = {
-            { coords = vector3(981.42, -113.49, 73.58), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48  },
+            { coords = vector3(970.61, -138.86, 73.84), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48  },
         }
     },
 }
