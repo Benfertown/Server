@@ -114,7 +114,7 @@ $(document).ready(function(){
     $('[data-toggle="race-setup"]').tooltip();
 });
 
-$(document).on('click', '#join-race', function(e){
+$(document).on('click', '#join-race', function(e){ // called when a player joins a race
     e.preventDefault();
 
     var RaceId = $(this).parent().parent().attr('id');
