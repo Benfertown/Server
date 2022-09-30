@@ -110,7 +110,7 @@ Config.Vehicles = {
     ["towtruck"] = "Towtruck",
     ["minivan"] = "Minivan (Rental Car)",
     ["blista"] = "Blista",
-    ["burrito"] = "Burrito"
+    ["gburrito"] = "Burrito"
 }
 
 Config.MinimalMetersForDamage = {
