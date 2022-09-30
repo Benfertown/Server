@@ -212,6 +212,7 @@ end)
 QBCore.Functions.CreateCallback('qb-burgershot:server:openMealBox', function(source, cb)
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
+    if not xPlayer then return end
 
     xPlayer.Functions.AddItem('burger-heartstopper')
     xPlayer.Functions.AddItem('burger-fries')
