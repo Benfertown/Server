@@ -131,14 +131,24 @@ AddEventHandler("qb-burgershot:CreateMurderMeal", function()
 	end
 end)
 
--- --Meal Creations
--- RegisterNetEvent("qb-burgershot:MurderMeal")
--- AddEventHandler("qb-burgershot:MurderMeal", function()
 
 
--- 	-- 		local randomToy = math.random(1,10)
--- -- 		--remove box
--- -- 		TriggerServerEvent('QBCore:Server:RemoveItem', "burger-murdermeal", 1)
+RegisterNetEvent("qb-burgershot:MurderMeal")
+AddEventHandler("qb-burgershot:MurderMeal", function()
+	local hasBox = QBCore.Functions.HasItem('burger-murdermeal')
+	if hasBox then
+		QBCore.Functions.TriggerCallback("qb-burgershot:server:openMealBox", function(toy)
+			if toy then
+				QBCore.Functions.Notify("You got a toy!", "success")
+			else
+				QBCore.Functions.Notify("No toy this time. :(", "error")
+			end
+		end)
+	end
+
+--	local randomToy = math.random(1,10)
+	
+-- 	TriggerServerEvent('QBCore:Server:RemoveItem', "burger-murdermeal", 1)
 -- -- 		--add items from box
 -- -- 		TriggerServerEvent('QBCore:Server:AddItem', "burger-heartstopper", 1)
 -- -- 		TriggerServerEvent('QBCore:Server:AddItem', "burger-softdrink", 1)
@@ -157,40 +167,7 @@ end)
 -- -- 		else
 -- --             		QBCore.Functions.Notify("No toy in Box Looool", "error")
 -- --         end
--- end)
-
--- RegisterNetEvent("qb-burgershot:CreateMurderMeal")
--- AddEventHandler("qb-burgershot:CreateMurderMeal", function()
---     if onDuty then
---     	QBCore.Functions.TriggerCallback('qb-burgershot:server:get:ingredientMurderMeal', function(HasItems)  
---     		if HasItems then
--- 				QBCore.Functions.Progressbar("pickup_sla", "Making A Murder Meal..", 4000, false, true, {
--- 					disableMovement = true,
--- 					disableCarMovement = true,
--- 					disableMouse = false,
--- 					disableCombat = true,
--- 				}, {
--- 					animDict = "mp_common",
--- 					anim = "givetake1_a",
--- 					flags = 8,
--- 				}, {}, {}, function() -- Done
--- 					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-fries", 1)
---                     TriggerServerEvent('QBCore:Server:RemoveItem', "burger-heartstopper", 1)
--- 					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-softdrink", 1)
--- 					TriggerServerEvent('QBCore:Server:AddItem', "burger-murdermeal", 1)
---                     TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-murdermeal"], "add")
---                     QBCore.Functions.Notify("You made a A Murder Meal", "success")
--- 				end, function()
--- 					QBCore.Functions.Notify("Cancelled..", "error")
--- 				end)
--- 			else
---    				QBCore.Functions.Notify("You dont have the items to make this", "error")
--- 			end
--- 		end)
--- 	else 
--- 		QBCore.Functions.Notify("You must be Clocked into work", "error")
--- 	end  
--- end)
+end)
 
 RegisterNetEvent("qb-burgershot:BleederBurger")
 AddEventHandler("qb-burgershot:BleederBurger", function()

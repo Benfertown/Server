@@ -93,18 +93,6 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:get:ingredientMurderMeal',
     end
 end)
 
--- QBCore.Functions.CreateUseableItem("burger-murdermeal", function(source, item)
-    
---     local Player = QBCore.Functions.GetPlayer(source)
---     TriggerClientEvent("qb-burgershot:MurderMeal", source, item.name)
--- end)
-
-RegisterNetEvent('make-murdermeal', function()
-    local source = source
-    local xPlayer = QBCore.Functions.GetPlayer(source)
-    if not xPlayer then return end
-end)
-
 RegisterNetEvent('qb-burgershot:server:cookPatty', function()
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
@@ -218,5 +206,30 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:CheckPatties', function(so
         cb(patties.amount)
     else
         cb(false)
+    end
+end)
+
+QBCore.Functions.CreateCallback('qb-burgershot:server:openMealBox', function(source, cb)
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    local patties = xPlayer.Functions.GetItemByName('burger-meat')
+
+    xPlayer.Functions.RemoveItem('burger-murdermeal', 1)
+    xPlayer.Functions.AddItem('burger-heartstopper')
+    xPlayer.Functions.AddItem('burger-fries')
+    xPlayer.Functions.AddItem('burger-softdrink')
+
+    local getToy = math.random(1, 10)
+
+    if getToy < 4 then
+        cb(false)
+    else
+        local toy = math.random(1, 2)
+        if toy == 1 then
+            xPlayer.Functions.AddItem('burger-toy1')
+        else
+            xPlayer.Functions.AddItem('burger-toy2')
+        end
+        cb(true)
     end
 end)
