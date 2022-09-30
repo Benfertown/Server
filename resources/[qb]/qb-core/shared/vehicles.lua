@@ -4582,8 +4582,6 @@ QBShared.Vehicles = {
         ['shop'] = 'pdm',
     },
 
-
-
 	-- BEGIN CUSTOM CARS
 	['16challenger'] = {
         ['name'] = '2016 Dodge Challenger',
@@ -4888,16 +4886,6 @@ QBShared.Vehicles = {
         ['hash'] = `hvrod`,
         ['shop'] = 'luxury',
     },
-
-	-- ['zr3806str'] = {
-	-- 	['name'] = '',
-    --     ['brand'] = 'Honda',
-    --     ['model'] = 'zr3806str',
-    --     ['price'] = 0,
-    --     ['category'] = '',
-    --     ['hash'] = `zr3806str`,
-    --     ['shop'] = '',
-    -- },
 }
 
 for _, v in pairs(QBShared.Vehicles) do
