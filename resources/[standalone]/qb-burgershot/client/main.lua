@@ -98,38 +98,16 @@ AddEventHandler("qb-burgershot:Storage2", function()
     })
 end)
 
---Meal Creations
-RegisterNetEvent("qb-burgershot:MurderMeal")
-AddEventHandler("qb-burgershot:MurderMeal", function()
-		local randomToy = math.random(1,10)
-		--remove box
-		TriggerServerEvent('QBCore:Server:RemoveItem', "burger-murdermeal", 1)
-		--add items from box
-		TriggerServerEvent('QBCore:Server:AddItem', "burger-heartstopper", 1)
-		TriggerServerEvent('QBCore:Server:AddItem', "burger-softdrink", 1)
-		TriggerServerEvent('QBCore:Server:AddItem', "burger-fries", 1)
-
-		if randomToy < 4 then
-			QBCore.Functions.Notify("No toy in Box Looool", "error")
-		elseif randomToy == 4 then
-			TriggerServerEvent('QBCore:Server:AddItem', "burger-toy1", 1)
-            		TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-toy1"], "add")
-		elseif randomToy < 10 and randomToy > 4 then
-			QBCore.Functions.Notify("No toy in Box Looool", "error")
-		elseif randomToy == 10 then
-			TriggerServerEvent('QBCore:Server:AddItem', "burger-toy2", 1)
-            		TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-toy2"], "add")
-		else
-            		QBCore.Functions.Notify("No toy in Box Looool", "error")
-        	end
-end)
-
 RegisterNetEvent("qb-burgershot:CreateMurderMeal")
 AddEventHandler("qb-burgershot:CreateMurderMeal", function()
-    if onDuty then
-    	QBCore.Functions.TriggerCallback('qb-burgershot:server:get:ingredientMurderMeal', function(HasItems)  
-    		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making A Murder Meal..", 4000, false, true, {
+	if onDuty then
+		local hasIngredients = (
+			QBCore.Functions.HasItem('burger-heartstopper') and
+			QBCore.Functions.HasItem('burger-fries') and
+			QBCore.Functions.HasItem('burger-softdrink'))			
+
+		if hasIngredients then
+			QBCore.Functions.Progressbar("pickup_sla", "Making A Murder Meal..", 4000, false, true, {
 					disableMovement = true,
 					disableCarMovement = true,
 					disableMouse = false,
@@ -139,23 +117,80 @@ AddEventHandler("qb-burgershot:CreateMurderMeal", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-fries", 1)
-                    TriggerServerEvent('QBCore:Server:RemoveItem', "burger-heartstopper", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-softdrink", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "burger-murdermeal", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-murdermeal"], "add")
-                    QBCore.Functions.Notify("You made a A Murder Meal", "success")
+					TriggerServerEvent('qb-burgershot:server:makeMeal-murder')
+					QBCore.Functions.Notify("You made a Murder Meal", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)
-			else
-   				QBCore.Functions.Notify("You dont have the items to make this", "error")
-			end
-		end)
-	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
-	end  
+		else
+			QBCore.Functions.Notify("You don't have the right ingredients!", "error", 5000)
+		end
+
+	else
+		QBCore.Functions.Notify("You're not clocked in...", "error", 5000)
+	end
 end)
+
+-- --Meal Creations
+-- RegisterNetEvent("qb-burgershot:MurderMeal")
+-- AddEventHandler("qb-burgershot:MurderMeal", function()
+
+
+-- 	-- 		local randomToy = math.random(1,10)
+-- -- 		--remove box
+-- -- 		TriggerServerEvent('QBCore:Server:RemoveItem', "burger-murdermeal", 1)
+-- -- 		--add items from box
+-- -- 		TriggerServerEvent('QBCore:Server:AddItem', "burger-heartstopper", 1)
+-- -- 		TriggerServerEvent('QBCore:Server:AddItem', "burger-softdrink", 1)
+-- -- 		TriggerServerEvent('QBCore:Server:AddItem', "burger-fries", 1)
+
+-- -- 		if randomToy < 4 then
+-- -- 			QBCore.Functions.Notify("No toy in Box Looool", "error")
+-- -- 		elseif randomToy == 4 then
+-- -- 			TriggerServerEvent('QBCore:Server:AddItem', "burger-toy1", 1)
+-- --             		TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-toy1"], "add")
+-- -- 		elseif randomToy < 10 and randomToy > 4 then
+-- -- 			QBCore.Functions.Notify("No toy in Box Looool", "error")
+-- -- 		elseif randomToy == 10 then
+-- -- 			TriggerServerEvent('QBCore:Server:AddItem', "burger-toy2", 1)
+-- --             		TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-toy2"], "add")
+-- -- 		else
+-- --             		QBCore.Functions.Notify("No toy in Box Looool", "error")
+-- --         end
+-- end)
+
+-- RegisterNetEvent("qb-burgershot:CreateMurderMeal")
+-- AddEventHandler("qb-burgershot:CreateMurderMeal", function()
+--     if onDuty then
+--     	QBCore.Functions.TriggerCallback('qb-burgershot:server:get:ingredientMurderMeal', function(HasItems)  
+--     		if HasItems then
+-- 				QBCore.Functions.Progressbar("pickup_sla", "Making A Murder Meal..", 4000, false, true, {
+-- 					disableMovement = true,
+-- 					disableCarMovement = true,
+-- 					disableMouse = false,
+-- 					disableCombat = true,
+-- 				}, {
+-- 					animDict = "mp_common",
+-- 					anim = "givetake1_a",
+-- 					flags = 8,
+-- 				}, {}, {}, function() -- Done
+-- 					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-fries", 1)
+--                     TriggerServerEvent('QBCore:Server:RemoveItem', "burger-heartstopper", 1)
+-- 					TriggerServerEvent('QBCore:Server:RemoveItem', "burger-softdrink", 1)
+-- 					TriggerServerEvent('QBCore:Server:AddItem', "burger-murdermeal", 1)
+--                     TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["burger-murdermeal"], "add")
+--                     QBCore.Functions.Notify("You made a A Murder Meal", "success")
+-- 				end, function()
+-- 					QBCore.Functions.Notify("Cancelled..", "error")
+-- 				end)
+-- 			else
+--    				QBCore.Functions.Notify("You dont have the items to make this", "error")
+-- 			end
+-- 		end)
+-- 	else 
+-- 		QBCore.Functions.Notify("You must be Clocked into work", "error")
+-- 	end  
+-- end)
 
 RegisterNetEvent("qb-burgershot:BleederBurger")
 AddEventHandler("qb-burgershot:BleederBurger", function()
