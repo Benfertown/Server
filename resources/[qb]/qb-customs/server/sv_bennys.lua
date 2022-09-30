@@ -39,6 +39,13 @@ RegisterNetEvent('qb-customs:server:attemptPurchase', function(type, upgradeLeve
     local moneyType = Config.MoneyType
     local balance = Player.Functions.GetMoney(moneyType)
     local price
+
+    if job == 'mechanic' then
+        price = 0
+        TriggerClientEvent('qb-customs:client:purchaseSuccessful', source)
+        return
+    end
+    
     if type == "repair" then
         price = RepairCosts[source] or Config.DefaultRepairPrice
         moneyType = Config.RepairMoneyType

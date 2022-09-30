@@ -391,4 +391,31 @@ Config.Locations = {
             { coords = vector3(340.38, -570.8, 28.8), length = 8.8, width = 4.2, heading = 340.0, minZ = 27.5, maxZ = 31.5 },
         }
     },
+
+    ['LMC'] = {
+        settings = {
+            label = 'Lost MC',
+            welcomeLabel = "Lost MC vehicle workshop",
+            enabled = true,
+        },
+        categories = {
+            repair = true,
+            respray = true,
+            liveries = true,
+            tint = true,
+            extras = true,
+            plate = true,
+            cosmetics = true,
+        },
+        drawtextui = {
+            text = "Lost MC"
+        },
+        restrictions = {
+            job = { 'mechanic' },
+            allowedClasses = { 18 },
+        },
+        zones = {
+            { coords = vector3(981.75, -112.47, 74.17), length = 9.4, width = 4.2, heading = 340.0, minZ = 27.5, maxZ = 31.5 },
+        }
+    },
 }
