@@ -1,6 +1,6 @@
 Config = Config or {}
 
-Config.Debug = false -- Set to True to enable Debug Prints
+Config.Debug = true -- Set to True to enable Debug Prints
 Config.MoneyType = 'bank'
 Config.RepairMoneyType = 'cash'
 Config.DefaultRepairPrice = 600 -- Repair price that is used if a vehicle-specific price is not available
