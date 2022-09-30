@@ -193,15 +193,15 @@ Config.Locations = {
         }
     },
 
-    ['LMC'] = {
+    ['Innocence'] = {
         settings = {
-            label = 'Lost MC',
-            welcomeLabel = "Lost MC vehicle workshop",
+            label = 'Bennys Motorworks',
+            welcomeLabel = "Welcome to Benny's Motorworks!",
             enabled = true,
         },
         blip = {
-            label = 'Lost MC',
-            coords = vector3(981.42, -113.49, 73.58),
+            label = 'Bennys Motorworks',
+            coords = vector3(-205.6992, -1312.7377, 31.1588),
             sprite = 72,
             scale = 0.65,
             color = 0,
@@ -209,22 +209,27 @@ Config.Locations = {
             enabled = true,
         },
         categories = {
+            mods = true,
+            turbo = true,
             repair = true,
             respray = true,
             liveries = true,
+            wheels = true,
             tint = true,
-            extras = true,
             plate = true,
+            extras = true,
+            neons = true,
+            xenons = true,
+            horn = true,
             cosmetics = true,
         },
         drawtextui = {
-            text = "Lost MC"
+            text = "Bennys Motorworks"
         },
-        restrictions = {
-            job = { 'mechanic' }
-        },
+        restrictions = { deniedClasses = { 18 } },
         zones = {
-            { coords = vector3(970.61, -138.86, 73.84), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48  },
+            { coords = vector3(972.06, -138.18, 73.63), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48 },
+            { coords = vector3(983.9, -148.31, 73.58), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48 },
         }
     },
 }
