@@ -354,7 +354,11 @@ end)
 
 QBCore.Functions.CreateUseableItem("burger-murdermeal", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("qb-burgershot:MurderMeal", source, item.name)
+	-- if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+    --     TriggerClientEvent("qb-burgershot:MurderMeal", source, item.name)
+    -- end
+
+    if Player.Functions.HasItem("burger-murdermeal") then
+        TriggerClientEvent("qb-burgershot:MurderMeal")
     end
 end)

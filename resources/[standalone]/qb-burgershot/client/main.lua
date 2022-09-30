@@ -131,8 +131,6 @@ AddEventHandler("qb-burgershot:CreateMurderMeal", function()
 	end
 end)
 
-
-
 RegisterNetEvent("qb-burgershot:MurderMeal")
 AddEventHandler("qb-burgershot:MurderMeal", function()
 	local hasBox = QBCore.Functions.HasItem('burger-murdermeal')
