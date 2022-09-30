@@ -193,15 +193,15 @@ Config.Locations = {
         }
     },
 
-    ['Innocence'] = {
+    ['Clubhouse'] = {
         settings = {
-            label = 'Bennys Motorworks',
-            welcomeLabel = "Welcome to Benny's Motorworks!",
+            label = 'Lost MC Clubhouse',
+            welcomeLabel = "Welcome to Lost MC Clubhouse!",
             enabled = true,
         },
         blip = {
-            label = 'Bennys Motorworks',
-            coords = vector3(-205.6992, -1312.7377, 31.1588),
+            label = 'Lost MC Clubhouse',
+            coords = vector3(980.91, -148.45, 75.05),
             sprite = 72,
             scale = 0.65,
             color = 0,
@@ -224,12 +224,14 @@ Config.Locations = {
             cosmetics = true,
         },
         drawtextui = {
-            text = "Bennys Motorworks"
+            text = "Lost Vehicle Workshop"
         },
-        restrictions = { deniedClasses = { 18 } },
+        restrictions = { 
+            deniedClasses = { 18 } 
+        },
         zones = {
-            { coords = vector3(972.06, -138.18, 73.63), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48 },
-            { coords = vector3(983.9, -148.31, 73.58), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48 },
+            { coords = vector3(973.14, -137.75, 74.23), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48 },
+            { coords = vector3(996.03, -143.03, 74.0), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48 },
         }
     },
 }
