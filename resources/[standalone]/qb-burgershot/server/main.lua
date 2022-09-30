@@ -214,7 +214,6 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:openMealBox', function(sou
     local xPlayer = QBCore.Functions.GetPlayer(source)
     local patties = xPlayer.Functions.GetItemByName('burger-meat')
 
-    xPlayer.Functions.RemoveItem('burger-murdermeal', 1)
     xPlayer.Functions.AddItem('burger-heartstopper')
     xPlayer.Functions.AddItem('burger-fries')
     xPlayer.Functions.AddItem('burger-softdrink')

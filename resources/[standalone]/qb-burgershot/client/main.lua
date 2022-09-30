@@ -133,8 +133,6 @@ end)
 
 RegisterNetEvent("qb-burgershot:MurderMeal")
 AddEventHandler("qb-burgershot:MurderMeal", function()
-	local hasBox = QBCore.Functions.HasItem('burger-murdermeal')
-	if hasBox then
 		QBCore.Functions.TriggerCallback("qb-burgershot:server:openMealBox", function(toy)
 			if toy then
 				QBCore.Functions.Notify("You got a toy!", "success")
