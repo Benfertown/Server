@@ -221,8 +221,7 @@ Config.Locations = {
             text = "Lost MC"
         },
         restrictions = {
-            job = { 'mechanic' },
-            allowedClasses = { 18 },
+            job = { 'mechanic' }
         },
         zones = {
             { coords = vector3(970.61, -138.86, 73.84), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48  },
