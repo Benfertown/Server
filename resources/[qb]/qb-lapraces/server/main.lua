@@ -241,8 +241,6 @@ RegisterNetEvent('qb-lapraces:server:JoinRace', function(RaceData)
     -- DEBUG
     -- print(Races[RaceId]) -- debug
     print("Race ID: " .. RaceId)
-    print("Race name: " .. RaceData.Name)
-    print("Race: " .. Races[CurrentRace])
 
     Races[RaceId].Waiting = true
     Races[RaceId].Racers[Player.PlayerData.citizenid] = {
