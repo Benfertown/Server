@@ -135,7 +135,11 @@ RegisterNetEvent("qb-burgershot:MurderMeal")
 AddEventHandler("qb-burgershot:MurderMeal", function()
 	QBCore.Functions.TriggerCallback("qb-burgershot:server:openMealBox", function(toy)
 		if toy then
-			QBCore.Functions.Notify("You got a toy!", "success")
+			if toy == "rare" then
+				QBCore.Functions.Notify("You got a rare toy! Congratulations!", "success")
+			else
+				QBCore.Functions.Notify("You got a toy!", "success")
+			end
 		else
 			QBCore.Functions.Notify("No toy this time. :(", "error")
 		end

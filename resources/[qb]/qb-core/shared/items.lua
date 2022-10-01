@@ -439,13 +439,11 @@ QBShared.Items = {
 	["klayman-green"] 		 		 = {["name"] = "klayman-green", 				["label"] = "Green Klayman", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_green.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Oh my got!"},
 	["klayman-pink"] 		 		 = {["name"] = "klayman-pink", 					["label"] = "Pink Klayman", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_pink.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Oh my got!"},
 	["klayman-red"] 		 		 = {["name"] = "klayman-red", 					["label"] = "Red Klayman", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_red.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Oh my got!"},
-	["klayman-drbob"] 		 		 = {["name"] = "klayman-drbob", 					["label"] = "Doctor Bob", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_drbob.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "\"You need an operation.\""},
-["klayman-chip"] 		 		 = {["name"] = "klayman-chip", 					["label"] = "Chip", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_chip.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "\"Hey everybody, it's me! Chip! From Klayworld! Klayworld's COMIN' BACK. *folds arms over and looks super cool*\""},
+	["klayman-drbob"] 		 		 = {["name"] = "klayman-drbob", 				["label"] = "Doctor Bob", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_drbob.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "\"You need an operation.\""},
+	["klayman-chip"] 		 		 = {["name"] = "klayman-chip", 					["label"] = "Chip", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_chip.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "\"Hey everybody, it's me! Chip! From Klayworld! Klayworld's COMIN' BACK. *folds arms over and looks super cool*\""},
 	
-
-
+	
 	-- ===== QB-FISHING =====
-
 	-- Regular Fish
 	['stingray'] 			     	 = {['name'] = 'stingray', 				    ['label'] = 'Stingray',            		['weight'] = 2500,      ['type'] = 'item',      ['image'] = 'stingray.png',         	['unique'] = true,     ['useable'] = false,     ['shouldClose'] = false,     ['combinable'] = nil,   ['description'] = 'Stingray'},
 	['flounder'] 			     	 = {['name'] = 'flounder', 				    ['label'] = 'Flounder',            		['weight'] = 2500,      ['type'] = 'item',      ['image'] = 'flounder.png',         	['unique'] = true,     ['useable'] = false,     ['shouldClose'] = false,     ['combinable'] = nil,   ['description'] = 'Flounder'},
