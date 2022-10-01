@@ -6,6 +6,10 @@ Config.GaragePedLocations = {
 
 Config.SQL = 'oxmysql' --- oxmysql or ghmattisql
 
+Config.Toys = {
+    "klayman-blue", "klayman-green", "klayman-pink", "klayman-red", "klayman-white", "klayman-yellow"
+}
+
 Config.Items = {
 label = "Shop",
     slots = 7,

@@ -223,12 +223,8 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:openMealBox', function(sou
     if getToy > 4 then
         cb(false)
     else
-        local toy = math.random(1, 2)
-        if toy == 1 then
-            xPlayer.Functions.AddItem('burger-toy1')
-        else
-            xPlayer.Functions.AddItem('burger-toy2')
-        end
+        local toy = math.random( # Config.Toys )
+            xPlayer.Functions.AddItem(Config.Toys[toy])
         cb(true)
     end
 end)

@@ -431,7 +431,15 @@ QBShared.Items = {
 	["burger-toy1"] 		 		 = {["name"] = "burger-toy1", 					["label"] = "Action Figure", 			["weight"] = 50, 		["type"] = "item", 		["image"] = "action-figure.png", 		["unique"] = true, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "An Action Figure From the late 90's"},
 	["burger-toy2"] 		 		 = {["name"] = "burger-toy2", 					["label"] = "Pink Teddy", 				["weight"] = 50, 		["type"] = "item", 		["image"] = "beaniebaby.png", 			["unique"] = true, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "A Fluffy Pink Teddy from the Atic"},
 	["burger-murdermeal"] 		 	 = {["name"] = "burger-murdermeal", 			["label"] = "Murder Meal", 				["weight"] = 125, 		["type"] = "item", 		["image"] = "burger-box.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "An Amazing Murder Meal with a chance of a toy."},
-
+	
+	-- Klay Men :)
+	["klayman-blue"] 		 		 = {["name"] = "klayman-blue", 					["label"] = "Blue Klayman", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_blue.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Oh my got!"},
+	["klayman-white"] 		 		 = {["name"] = "klayman-white", 					["label"] = "White Klayman", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_white.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Oh my got!"},
+	["klayman-yellow"] 		 		 = {["name"] = "klayman-yellow", 					["label"] = "Yellow Klayman", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_yellow.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Oh my got!"},
+	["klayman-green"] 		 		 = {["name"] = "klayman-green", 					["label"] = "Green Klayman", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_green.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Oh my got!"},
+	["klayman-pink"] 		 		 = {["name"] = "klayman-pink", 					["label"] = "Pink Klayman", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_green.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Oh my got!"},
+	["klayman-red"] 		 		 = {["name"] = "klayman-red", 					["label"] = "Red Klayman", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "klayman_red.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Oh my got!"},
+	
 
 
 	-- ===== QB-FISHING =====
