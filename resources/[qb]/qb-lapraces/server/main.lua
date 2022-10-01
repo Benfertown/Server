@@ -233,9 +233,10 @@ RegisterNetEvent('qb-lapraces:server:JoinRace', function(RaceData)
             AvailableRaces[PreviousRaceKey].RaceData = Races[CurrentRace]
             TriggerClientEvent('qb-lapraces:client:LeaveRace', src, Races[CurrentRace])
         end
+        print(Races[RaceId]) -- debug
         TriggerClientEvent('qb-phone:client:UpdateLapraces', -1)
     end
-    print(Races[RaceId]) -- debug
+    
     Races[RaceId].Waiting = true
     Races[RaceId].Racers[Player.PlayerData.citizenid] = {
         Checkpoint = 0,
