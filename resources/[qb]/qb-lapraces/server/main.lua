@@ -212,7 +212,8 @@ end)
 RegisterNetEvent('qb-lapraces:server:JoinRace', function(RaceData)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    local RaceId = RaceData.RaceId
+    --local RaceId = RaceData.RaceId
+    local RaceId = 'LR-8462' -- debug
     local AvailableKey = GetOpenedRaceKey(RaceId)
     local CurrentRace = GetCurrentRace(Player.PlayerData.citizenid)
     if CurrentRace ~= nil then
@@ -239,7 +240,7 @@ RegisterNetEvent('qb-lapraces:server:JoinRace', function(RaceData)
 
     print(Races[RaceId]) -- debug
     print("Race ID: " .. RaceId)
-    
+
     Races[RaceId].Waiting = true
     Races[RaceId].Racers[Player.PlayerData.citizenid] = {
         Checkpoint = 0,
