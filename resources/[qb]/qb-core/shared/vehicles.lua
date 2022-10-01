@@ -4668,10 +4668,10 @@ QBShared.Vehicles = {
         ['name'] = 'RX7',
         ['brand'] = 'Mazda',
         ['model'] = 'fd',
-        ['price'] = 19000,
-        ['category'] = 'sportsclassics',
+        ['price'] = 800000,
+        ['category'] = 'super',
         ['hash'] = `fd`,
-        ['shop'] = 'pdm',
+        ['shop'] = 'luxuryr=',
     },
 	['lp700'] = {
         ['name'] = 'Aventador',

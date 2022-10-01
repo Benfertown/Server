@@ -77,7 +77,7 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
                 if not itemInfo["unique"] then
                     local itemAmount = math.random(1, 3)
                     if randomItem == "plastic" then
-                        itemAmount = math.random(15, 30)
+                        itemAmount = math.random(5, 15)
                     elseif randomItem == "goldchain" then
                         itemAmount = math.random(1, 4)
                     elseif randomItem == "pistol_ammo" then
@@ -87,11 +87,11 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
                     elseif randomItem == "cryptostick" then
                         itemAmount = math.random(1, 2)
                     elseif randomItem == "rubber" then
-                        itemAmount = math.random(15, 30)
+                        itemAmount = math.random(5, 15)
                     elseif randomItem == "metalscrap" then
-                        itemAmount = math.random(15, 30)
+                        itemAmount = math.random(5, 15)
                     elseif randomItem == "glass" then
-                        itemAmount = math.random(15, 30)
+                        itemAmount = math.random(5, 15)
                     end
 
                     Player.Functions.AddItem(randomItem, itemAmount)
