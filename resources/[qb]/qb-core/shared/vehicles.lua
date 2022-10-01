@@ -748,10 +748,10 @@ QBShared.Vehicles = {
 		['name'] = 'Sanctus',
 		['brand'] = 'LCC',
 		['model'] = 'sanctus',
-		['price'] = 35000,
+		['price'] = 250000,
 		['category'] = 'motorcycles',
 		['hash'] = `sanctus`,
-		['shop'] = 'pdm',
+		['shop'] = 'luxury',
 	},
 	['shotaro'] = {
 		['name'] = 'Shotaro Concept',

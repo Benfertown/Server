@@ -77,7 +77,7 @@ Config.Businesses = {
 
 Config.Plates = {
     [1] = {
-        coords = vector4(980.82, -113.92, 74.16, 313.76),
+        coords = vector4(972.66, -138.15, 73.74, 232.62),
         boxData = {
             heading = 340,
             length = 5,
