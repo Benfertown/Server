@@ -61,7 +61,14 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
         end
 
         for _ = 1, itemCount, 1 do
-            local randomItem = Config.Rewards[Tier][Config.Houses[house]["furniture"][cabin]["type"]][math.random(1, #Config.Rewards[Tier][Config.Houses[house]["furniture"][cabin]["type"]])]
+            local randomItem
+            local roll = math.random(10)
+            
+            if roll == 1 then
+                randomItem = Config.Rares[math.random(# Config.Rares)]
+            else
+                randomItem = Config.Rewards[Tier][Config.Houses[house]["furniture"][cabin]["type"]][math.random(1, #Config.Rewards[Tier][Config.Houses[house]["furniture"][cabin]["type"]])]
+            end
             local itemInfo = QBCore.Shared.Items[randomItem]
             if math.random(1, 100) == 69 then
                 randomItem = "painkillers"

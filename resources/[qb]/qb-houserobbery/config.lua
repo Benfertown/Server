@@ -9,11 +9,15 @@ Config.MaximumTime = 22
 
 Config.Rewards = {
     [1] = {
-        ["cabin"] = {"rawmeth", "cokeleaf", "weedleaf", "plastic", "diamond_ring", "goldchain", "weed_skunk", "thermite", "cryptostick"},
-        ["kitchen"] = {"rawmeth", "cokeleaf", "weedleaf", "tosti", "sandwich", "goldchain"},
-        ["chest"] = {"rawmeth", "cokeleaf", "weedleaf", "metalscrap", "rubber", "rolex", "diamond_ring", "goldchain", "weed_skunk", "thermite", "cryptostick", "weapon_combatpistol"},
-        ["livingroom"] = {"rawmeth", "cokeleaf", "weedleaf", "glass", "rolex", "diamond_ring", "goldchain", "thermite", "cryptostick", "tablet", "pistol_ammo"}
+        ["cabin"] = {"plastic", "diamond_ring", "goldchain", "weed_skunk", "thermite", "cryptostick"},
+        ["kitchen"] = {"tosti", "sandwich", "goldchain"},
+        ["chest"] = {"metalscrap", "rubber", "rolex", "diamond_ring", "goldchain", "weed_skunk", "thermite", "cryptostick", "weapon_combatpistol"},
+        ["livingroom"] = {"glass", "rolex", "diamond_ring", "goldchain", "cryptostick", "tablet", "pistol_ammo"}
     }
+}
+
+Config.Rares = {
+    "rawmeth", "cokeleaf", "weedleaf", "thermite"
 }
 
 Config.Houses = {

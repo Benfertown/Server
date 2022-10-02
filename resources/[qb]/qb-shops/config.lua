@@ -112,6 +112,14 @@ Config.Products = {
             type = "item",
             slot = 13,
         },
+        [14] = {
+            name = "drugsolvent",
+            price = 20,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 14,
+        },
     },
     ["liquor"] = {
         [1] = {
@@ -296,7 +304,7 @@ Config.Products = {
         },
         [20] = {
             name = "drugphosphorus",
-            price = 50,
+            price = 25,
             amount = 50,
             info = {},
             type = "item",
@@ -304,20 +312,13 @@ Config.Products = {
         },
         [21] = {
             name = "drugsulfur",
-            price = 50,
+            price = 25,
             amount = 50,
             info = {},
             type = "item",
             slot = 21,
         },
-        [22] = {
-            name = "drugsolvent",
-            price = 50,
-            amount = 50,
-            info = {},
-            type = "item",
-            slot = 22,
-        },
+        
     },
     ["weedshop"] = {
         -- [1] = {
