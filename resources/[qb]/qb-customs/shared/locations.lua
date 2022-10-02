@@ -144,6 +144,9 @@ Config.Locations = {
             enabled = true,
         },
         categories = {
+            mods = true,
+            turbo = true,
+            wheels = true,
             repair = true,
             respray = true,
             liveries = true,
