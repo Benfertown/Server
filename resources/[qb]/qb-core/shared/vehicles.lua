@@ -3405,15 +3405,20 @@ QBShared.Vehicles = {
 		['hash'] = `cheburek`,
 		['shop'] = 'pdm',
 	},
-	['toreador'] = {
-		['name'] = 'Toreador',
-		['brand'] = 'Pegassi',
-		['model'] = 'toreador',
-		['price'] = 50000,
-		['category'] = 'sportsclassics',
-		['hash'] = `toreador`,
-		['shop'] = 'pdm',
-	},
+	
+	-- -- no.
+
+	-- ['toreador'] = {
+	-- 	['name'] = 'Toreador',
+	-- 	['brand'] = 'Pegassi',
+	-- 	['model'] = 'toreador',
+	-- 	['price'] = 3000000,
+	-- 	['category'] = 'sportsclassics',
+	-- 	['hash'] = `toreador`,
+	-- 	['shop'] = 'luxury',
+	-- },
+
+
 	--- Super
 	['adder'] = {
 		['name'] = 'Adder',
@@ -4886,6 +4891,7 @@ QBShared.Vehicles = {
         ['hash'] = `hvrod`,
         ['shop'] = 'luxury',
     },
+
 }
 
 for _, v in pairs(QBShared.Vehicles) do
