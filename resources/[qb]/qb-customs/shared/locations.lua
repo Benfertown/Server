@@ -160,8 +160,7 @@ Config.Locations = {
             allowedClasses = { 18 },
         },
         zones = {
-            { coords = vector3(450.09, -975.92, 25.7), length = 9.0, width = 4.0, heading = 90.0, minZ = 24.5, maxZ = 28.5 },
-            { coords = vector3(435.53, -975.97, 25.7), length = 9.0, width = 4.0, heading = 90.0, minZ = 24.5, maxZ = 28.5 },
+            { coords = vector3(432.11, -1022.66, 28.75), length = 9.0, width = 4.0, heading = 90.0, minZ = 27, maxZ = 29 },
         }
     },
 
