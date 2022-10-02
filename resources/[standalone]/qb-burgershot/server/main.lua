@@ -236,9 +236,16 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:openMealBox', function(sou
         cb(false)
     else
         local subrand = math.random(1, 10)
-
+        local toy
         if subrand == 1 then -- win a rare toy
-            local toy = math.random( # Config.RareToys)
+            
+            local shiny = math.random(1, 20)
+            if shiny == 1 then
+                toy = math.random( # Config.Shinies )
+            else
+                toy = math.random( # Config.RareToys )
+            end
+            
             xPlayer.Functions.AddItem(Config.RareToys[toy])
             cb("rare")
         else -- win regular toy

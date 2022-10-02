@@ -14,6 +14,10 @@ Config.RareToys = {
     "klayman-drbob", "klayman-chip"
 }
 
+Config.Shinies = {
+    "klayman-drbob-shiny", "klayman-chip-shiny"
+}
+
 Config.Items = {
 label = "Shop",
     slots = 7,
