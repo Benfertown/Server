@@ -474,12 +474,14 @@ function MakePatty()
 		else 
 			pattyCount = 0
 		end
-	end)
+	
 
-	if pattyCount < 10 then
-		QBCore.Functions.Notify("You need 10 patties!", "error")
-		return
-	end
+		if pattyCount < 10 then
+			QBCore.Functions.Notify("You need 10 patties!", "error")
+			return
+		end
+
+	end)
 
 	QBCore.Functions.Progressbar("pickup", "Cooking the Patty..", 4000, false, true, {
         disableMovement = true,
