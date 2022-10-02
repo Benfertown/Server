@@ -10,3 +10,9 @@ client_script 'client.lua'
 
 data_file 'TIMECYCLEMOD_FILE' 'bs_timecycmod.xml'
 data_file 'SCALEFORM_DLC_FILE' 'stream/int1756029552.gfx'
+
+files {
+    "interiorproxies.meta"
+}
+
+data_file 'INTERIOR_PROXY_ORDER_FILE' 'interiorproxies.meta'
