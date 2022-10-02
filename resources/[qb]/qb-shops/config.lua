@@ -296,7 +296,7 @@ Config.Products = {
         },
         [20] = {
             name = "drugphosphorus",
-            price = 100,
+            price = 50,
             amount = 50,
             info = {},
             type = "item",
@@ -304,7 +304,7 @@ Config.Products = {
         },
         [21] = {
             name = "drugsulfur",
-            price = 100,
+            price = 50,
             amount = 50,
             info = {},
             type = "item",
@@ -312,7 +312,7 @@ Config.Products = {
         },
         [22] = {
             name = "drugsolvent",
-            price = 100,
+            price = 50,
             amount = 50,
             info = {},
             type = "item",
