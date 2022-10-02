@@ -481,29 +481,29 @@ function MakePatty()
 			return
 		end
 
+		QBCore.Functions.Progressbar("pickup", "Cooking the Patty..", 4000, false, true, {
+			disableMovement = true,
+			disableCarMovement = true,
+			disableMouse = false,
+			disableCombat = true,
+		},{
+			animDict = "amb@prop_human_bbq@male@base",
+			anim = "base",
+			flags = 8,
+		}, {
+			model = "prop_cs_fork",
+			bone = 28422,
+			coords = vector3(-0.005, 0.00, 0.00),
+			rotation = vector3(175.0, 160.0, 0.0),
+		}) 
+
+		Citizen.Wait(4000)
+
+		TriggerServerEvent('qb-burgershot:server:cookPatty')
+		QBCore.Functions.Notify("You cooked the meat", "success")
+		StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
+
 	end)
-
-	QBCore.Functions.Progressbar("pickup", "Cooking the Patty..", 4000, false, true, {
-        disableMovement = true,
-        disableCarMovement = true,
-        disableMouse = false,
-        disableCombat = true,
-    },{
-        animDict = "amb@prop_human_bbq@male@base",
-        anim = "base",
-        flags = 8,
-    }, {
-        model = "prop_cs_fork",
-        bone = 28422,
-        coords = vector3(-0.005, 0.00, 0.00),
-        rotation = vector3(175.0, 160.0, 0.0),
-    }    
-)
-    Citizen.Wait(4000)
-
-	TriggerServerEvent('qb-burgershot:server:cookPatty')
-    QBCore.Functions.Notify("You cooked the meat", "success")
-    StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
 end
 
 function MakeSoftDrink()
