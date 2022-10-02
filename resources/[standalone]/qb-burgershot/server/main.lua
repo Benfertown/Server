@@ -98,8 +98,8 @@ RegisterNetEvent('qb-burgershot:server:cookPatty', function()
     local xPlayer = QBCore.Functions.GetPlayer(source)
     if not xPlayer then return end
 
-    xPlayer.Functions.RemoveItem('burger-raw', 1)
-    xPlayer.Functions.AddItem('burger-meat', 1)
+    xPlayer.Functions.RemoveItem('burger-raw', 10)
+    xPlayer.Functions.AddItem('burger-meat', 10)
 end)
 
 RegisterNetEvent('qb-burgershot:server:cookFries', function() 
@@ -201,6 +201,18 @@ QBCore.Functions.CreateCallback('qb-burgershot:server:CheckPatties', function(so
     local source = source
     local xPlayer = QBCore.Functions.GetPlayer(source)
     local patties = xPlayer.Functions.GetItemByName('burger-meat')
+
+    if patties then
+        cb(patties.amount)
+    else
+        cb(false)
+    end
+end)
+
+QBCore.Functions.CreateCallback('qb-burgershot:server:CheckPattiesRaw', function(source, cb)
+    local source = source
+    local xPlayer = QBCore.Functions.GetPlayer(source)
+    local patties = xPlayer.Functions.GetItemByName('burger-raw')
 
     if patties then
         cb(patties.amount)

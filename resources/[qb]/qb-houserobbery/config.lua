@@ -11,7 +11,7 @@ Config.Rewards = {
     [1] = {
         ["cabin"] = {"plastic", "diamond_ring", "goldchain", "weed_skunk", "thermite", "cryptostick"},
         ["kitchen"] = {"tosti", "sandwich", "goldchain"},
-        ["chest"] = {"metalscrap", "rubber", "rolex", "diamond_ring", "goldchain", "weed_skunk", "thermite", "cryptostick", "weapon_combatpistol"},
+        ["chest"] = {"rawmeth", "cokeleaf", "weedleaf", "metalscrap", "rubber", "rolex", "diamond_ring", "goldchain", "weed_skunk", "thermite", "cryptostick", "weapon_combatpistol"},
         ["livingroom"] = {"glass", "rolex", "diamond_ring", "goldchain", "thermite", "cryptostick", "tablet", "pistol_ammo"}
     }
 }

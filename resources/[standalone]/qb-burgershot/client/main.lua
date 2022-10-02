@@ -466,6 +466,21 @@ end
 
 function MakePatty()
 
+	QBCore.Functions.TriggerCallback('qb-burgershot:server:CheckPattiesRaw', function(patties) 
+		local pattyCount = 0
+		
+		if patties then 
+			pattyCount = patties
+		else 
+			pattyCount = 0
+		end
+	end)
+
+	if patties < 10 then
+		QBCore.Functions.Notify("You need 10 patties!", "error")
+		return
+	end
+
 	QBCore.Functions.Progressbar("pickup", "Cooking the Patty..", 4000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
