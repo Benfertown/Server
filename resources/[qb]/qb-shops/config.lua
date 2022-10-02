@@ -303,7 +303,7 @@ Config.Products = {
             slot = 20,
         },
         [21] = {
-            name = "drusulfur",
+            name = "drugsulfur",
             price = 100,
             amount = 50,
             info = {},
