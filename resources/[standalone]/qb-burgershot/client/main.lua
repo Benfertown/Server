@@ -137,6 +137,8 @@ AddEventHandler("qb-burgershot:MurderMeal", function()
 		if toy then
 			if toy == "rare" then
 				QBCore.Functions.Notify("You got a rare toy! Congratulations!", "success")
+			elseif toy == "shiny"
+				QBCore.Functions.Notify("You got an exceedingly rare SHINY TOY! you lucky motherfucker.", "success")
 			else
 				QBCore.Functions.Notify("You got a toy!", "success")
 			end
