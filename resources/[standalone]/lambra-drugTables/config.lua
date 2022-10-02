@@ -16,7 +16,7 @@ Config.Tables = {
         ingredients = {--You can add/remove/change more ingredients
             {item = "weedleaf", requiredAmount = 5}
         },
-        rewardItem = {item = "processedweed", amount = 1}, --The final product that the player will receive
+        rewardItem = {item = "weed_og-kush", amount = 10}, --The final product that the player will receive
         requiredMinCooking = 5, -- minutes that needed to be cooking to get the final product
         overcookMargin = 2, -- requiredMinCooking + overcookMargin value table will explode
         startTemp = 25, --Temperature that table will start with
@@ -32,7 +32,7 @@ Config.Tables = {
             {item = "druggasoline", requiredAmount = 1},
             {item = "drugsolvent", requiredAmount = 3}
         },
-        rewardItem = {item = "processedcoke", amount = 1}, --The final product that the player will receive
+        rewardItem = {item = "cokebaggy", amount = 10}, --The final product that the player will receive
         requiredMinCooking = 5, -- minutes that needed to be cooking to get the final product
         overcookMargin = 2, -- requiredMinCooking + overcookMargin value table will explode
         startTemp = 25, --Temperature that table will start with
@@ -48,7 +48,7 @@ Config.Tables = {
             {item = "drugsulfur", requiredAmount = 3},
             {item = "drugphosphorus", requiredAmount = 2}
         },
-        rewardItem = {item = "processedmeth", amount = 1}, --The final product that the player will receive
+        rewardItem = {item = "meth", amount = 10}, --The final product that the player will receive
         requiredMinCooking = 5, -- minutes that needed to be cooking to get the final product
         overcookMargin = 2, -- requiredMinCooking + overcookMargin value table will explode
         startTemp = 25, --Temperature that table will start with
