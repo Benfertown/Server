@@ -476,7 +476,7 @@ function MakePatty()
 		end
 	end)
 
-	if patties < 10 then
+	if pattyCount < 10 then
 		QBCore.Functions.Notify("You need 10 patties!", "error")
 		return
 	end
