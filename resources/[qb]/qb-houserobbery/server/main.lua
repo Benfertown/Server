@@ -62,7 +62,7 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
 
         for _ = 1, itemCount, 1 do
             local randomItem
-            local roll = math.random(10)
+            local roll = math.random(20)
             
             if roll == 1 then
                 randomItem = Config.Rares[math.random(# Config.Rares)]

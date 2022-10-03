@@ -52,13 +52,13 @@ Config.RewardTypes = {
 
 Config.LockerRewards = {
     ["tier1"] = {
-        [1] = {item = "goldchain", minAmount = 5, maxAmount = 15},
+        [1] = {item = "cryptostick", minAmount = 5, maxAmount = 15},
     },
     ["tier2"] = {
-        [1] = {item = "rolex", minAmount = 5, maxAmount = 15},
+        [1] = {item = "cryptostick", minAmount = 5, maxAmount = 15},
     },
     ["tier3"] = {
-        [1] = {item = "goldbar", minAmount = 1, maxAmount = 2},
+        [1] = {item = "cryptostick", minAmount = 1, maxAmount = 2},
     },
 }
 
