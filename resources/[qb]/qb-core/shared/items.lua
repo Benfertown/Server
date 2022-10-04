@@ -496,5 +496,10 @@ QBShared.Items = {
 	['drugsulfur'] 					= {['name'] = 'drugsulfur', 			['label'] = 'Sulfur', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'drugsulfur.png', 		['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
 	['drugphosphorus'] 				= {['name'] = 'drugphosphorus', 		['label'] = 'Phosphorus', 		['weight'] = 0, 		['type'] = 'item', 		['image'] = 'drugphosphorus.png', 		['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
 	['processedmeth'] 				= {['name'] = 'processedmeth', 			['label'] = 'Processed Meth', 	['weight'] = 0, 		['type'] = 'item', 		['image'] = 'processedmeth.png', 		['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
+	
+
+	['speaker'] 				= {['name'] = 'speaker', 			['label'] = 'Speaker', 	['weight'] = 0, 		['type'] = 'item', 		['image'] = 'radioscanner.png', 		['unique'] = true, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A speaker that plays audio'},
+	
+
 }
 

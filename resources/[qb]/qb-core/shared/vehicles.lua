@@ -4902,6 +4902,37 @@ QBShared.Vehicles = {
         ['shop'] = 'pdm',
     },
 
+	['zondacinque'] = {
+			['name'] = 'Zonda',
+			['brand'] = 'Pagani',
+			['model'] = 'zondacinque',
+			['price'] = 450000,
+			['category'] = 'super',
+			['hash'] = `zondacinque`,
+			['shop'] = 'luxury',
+	},
+
+	['laferrari'] = {
+		['name'] = 'La Ferrari',
+        ['brand'] = 'Ferrari',
+        ['model'] = 'laferrari',
+        ['price'] = 450000,
+        ['category'] = 'super',
+        ['hash'] = `zondacinque`,
+        ['shop'] = 'luxury',
+    },
+
+
+	-- [''] = {
+	-- 	['name'] = '',
+    --     ['brand'] = '',
+    --     ['model'] = '',
+    --     ['price'] = 0,
+    --     ['category'] = '',
+    --     ['hash'] = ``,
+    --     ['shop'] = '',
+    -- },
+
 }
 
 for _, v in pairs(QBShared.Vehicles) do
