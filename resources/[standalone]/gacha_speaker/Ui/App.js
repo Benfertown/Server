@@ -75,9 +75,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-  var vid = document.querySelector('.video-stream');
-  vid.volume = 0.5; // where 0 - no volume and 1 - 100% of volume. So 0.1 is 10% of volume. It works for me.
-
+  player.setVolume(50)
 }
 
 function onPlayerStateChange(event) {
