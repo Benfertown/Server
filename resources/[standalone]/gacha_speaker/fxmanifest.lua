@@ -5,7 +5,7 @@ description 'A speaker resource by Gacha#4596'
 
 shared_script { 
     'Config.lua',
-    '@qb-core/import.lua'--Remove this line if you use ESX
+    --'@qb-core/import.lua'--Remove this line if you use ESX
 }
 
 client_scripts {
