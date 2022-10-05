@@ -1,4 +1,5 @@
 local Array = {}
+local QBCore = exports['qb-core']:GetCoreObject()
 
 if Config.UseEsx then
     ESX = nil

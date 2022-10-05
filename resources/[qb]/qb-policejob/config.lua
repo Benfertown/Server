@@ -139,6 +139,9 @@ local ALLVEHICLES = {
         ["audipd"] = "Audi",
         ["porschepd"] = "Porsche",
 
+        -- For when you have particularly violent criminals
+        ["apc"] = "Crowd Control Tank",
+
 }
 
 Config.AuthorizedVehicles = {

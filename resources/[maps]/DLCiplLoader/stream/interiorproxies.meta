@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SInteriorOrderData>
+    <startFrom value="2000"/>
+    <proxies>
+	<Item>ks_casino_back_milo</Item>
+    <Item>ks_casino_garage_milo</Item>
+    <Item>ks_casino_heist_milo</Item>
+    <Item>ks_casino_hotel_milo</Item>
+    <Item>ks_casino_loading_milo</Item>
+    <Item>ks_casino_main_milo</Item>
+    <Item>ks_casino_shaft_milo</Item>
+    <Item>ks_casino_tunnel_milo</Item>
+    <Item>ks_casino_utility_milo</Item>
+    <Item>ks_casino_vault_milo</Item>
+    </proxies>
+</SInteriorOrderData>

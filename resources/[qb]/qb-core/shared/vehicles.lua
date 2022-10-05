@@ -5371,6 +5371,27 @@ QBShared.Vehicles = {
         ['hash'] = `Speedster`,
         ['shop'] = 'luxury',
     },
+
+	['rs5'] = {
+		['name'] = 'RS5',
+        ['brand'] = 'Audi',
+        ['model'] = 'rs5',
+        ['price'] = 40000,
+        ['category'] = 'sports',
+        ['hash'] = `rs5`,
+        ['shop'] = 'luxury',
+    },
+
+	['2013rs7'] = {
+		['name'] = 'RS7',
+        ['brand'] = 'Audi',
+        ['model'] = '2013rs7',
+        ['price'] = 100000,
+        ['category'] = 'sports',
+        ['hash'] = `2013rs7`,
+        ['shop'] = 'luxury',
+    },
+
 	-- [''] = {
 	-- 	['name'] = '',
     --     ['brand'] = '',
