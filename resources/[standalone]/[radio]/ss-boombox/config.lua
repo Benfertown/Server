@@ -14,8 +14,8 @@ Config.MusicZones = {
 		volume = 0.1, -- Default volume (0.0 to 1.0 as per xsound documentation)
 		range = 20.0, -- Maximum distance to which music can me heared at full volume
 		defaultLink = "https://www.youtube.com/watch?v=pTIN6-pLeds", -- Default song link (Leave Empty to playnothing)
-		isplaying = false, -- music automatically start playing defaultLink with server start/re-start
-		loop = false, -- loop a song
+		isplaying = true, -- music automatically start playing defaultLink with server start/re-start
+		loop = true, -- loop a song
 		defaultTime = 0 -- start song from 0ms
 	},
 	{
@@ -25,8 +25,8 @@ Config.MusicZones = {
 		volume = 0.1,
 		range = 10.0,
 		defaultLink = "",
-		isplaying = false,
-		loop = false,
+		isplaying = true,
+		loop = true,
 		defaultTime = 0
 	},
 }
