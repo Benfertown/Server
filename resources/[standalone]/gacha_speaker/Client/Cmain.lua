@@ -1,3 +1,5 @@
+local QBCore = exports['qb-core']:GetCoreObject()
+
 local Speakers, isNotInRadio, neearSpeaker = {}, true, nil
 if Config.UseEsx then
     ESX = nil
