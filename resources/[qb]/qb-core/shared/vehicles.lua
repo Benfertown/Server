@@ -4655,7 +4655,7 @@ QBShared.Vehicles = {
         ['name'] = 'Lancer',
         ['brand'] = 'Mitsubishi',
         ['model'] = 'evo9',
-        ['price'] = 36800,
+        ['price'] = 300800,
         ['category'] = 'sports',
         ['hash'] = `evo9`,
         ['shop'] = 'luxury',
@@ -4670,13 +4670,13 @@ QBShared.Vehicles = {
         ['shop'] = 'pdm',
     },
 	['fd'] = {
-        ['name'] = 'RX7',
+        ['name'] = 'FD RX7',
         ['brand'] = 'Mazda',
         ['model'] = 'fd',
-        ['price'] = 800000,
-        ['category'] = 'super',
+        ['price'] = 100000,
+        ['category'] = 'sports',
         ['hash'] = `fd`,
-        ['shop'] = 'luxuryr=',
+        ['shop'] = 'luxury',
     },
 	['lp700'] = {
         ['name'] = 'Aventador',
@@ -4862,13 +4862,13 @@ QBShared.Vehicles = {
         ['shop'] = 'luxury',
     },
 
-	['ninjah2'] = {
+	['nh2r'] = {
 		['name'] = 'Ninja H2',
         ['brand'] = 'Kawasaki',
-        ['model'] = 'ninjah2',
-        ['price'] = 80000,
+        ['model'] = 'nh2r',
+        ['price'] = 600000,
         ['category'] = 'motorcycles',
-        ['hash'] = `ninjah2`,
+        ['hash'] = `nh2r`,
         ['shop'] = 'luxury',
     },
 
@@ -4916,13 +4916,471 @@ QBShared.Vehicles = {
 		['name'] = 'La Ferrari',
         ['brand'] = 'Ferrari',
         ['model'] = 'laferrari',
-        ['price'] = 450000,
+        ['price'] = 1500000,
         ['category'] = 'super',
         ['hash'] = `zondacinque`,
         ['shop'] = 'luxury',
     },
 
+	['458it'] = {
+		['name'] = '458 Italia',
+        ['brand'] = 'Ferrari',
+        ['model'] = '458it',
+        ['price'] = 750000,
+        ['category'] = 'super',
+        ['hash'] = `458it`,
+        ['shop'] = 'luxury',
+    },
 
+	['lp670sv'] = {
+		['name'] = 'Murcielago LP670 SV',
+        ['brand'] = 'Lamborghini',
+        ['model'] = 'lp670sv',
+        ['price'] = 1500000,
+        ['category'] = 'super',
+        ['hash'] = `lp670sv`,
+        ['shop'] = 'luxury',
+    },
+
+	['a70'] = {
+		['name'] = 'A70',
+        ['brand'] = 'Toyota',
+        ['model'] = 'a70',
+        ['price'] = 200000,
+        ['category'] = 'sportsclassics',
+        ['hash'] = `a70`,
+        ['shop'] = 'pdm',
+    },
+
+	['c8z0623'] = {
+		['name'] = 'Corvette C8 Z06',
+        ['brand'] = 'Chevrolet',
+        ['model'] = 'c8z0623',
+        ['price'] = 600000,
+        ['category'] = 'sports',
+        ['hash'] = `c8z0623`,
+        ['shop'] = 'luxury',
+    },
+
+	['camaro90'] = {
+		['name'] = 'Camaro Z28',
+        ['brand'] = 'Chevrolet',
+        ['model'] = 'camaro90',
+        ['price'] = 50000,
+        ['category'] = 'sportsclassics',
+        ['hash'] = `camaro90`,
+        ['shop'] = 'pdm',
+    },
+
+	['f8t'] = {
+		['name'] = 'F8 Tributo',
+        ['brand'] = 'Ferrari',
+        ['model'] = 'f8t',
+        ['price'] = 200000,
+        ['category'] = 'super',
+        ['hash'] = `f8t`,
+        ['shop'] = 'luxury',
+    },
+
+	['f288gto'] = {
+		['name'] = '288 GTO',
+        ['brand'] = 'Ferrari',
+        ['model'] = 'f288gto',
+        ['price'] = 120000,
+        ['category'] = 'super',
+        ['hash'] = `f288gto`,
+        ['shop'] = 'luxury',
+    },
+
+	['f5095'] = {
+		['name'] = 'F50',
+        ['brand'] = 'Ferrari',
+        ['model'] = 'f5095',
+        ['price'] = 750000,
+        ['category'] = 'super',
+        ['hash'] = `f5095`,
+        ['shop'] = 'luxury',
+    },
+
+	['gstcoronet1'] = {
+		['name'] = 'Coronet Super Bee',
+        ['brand'] = 'Dodge',
+        ['model'] = 'gstcoronet1',
+        ['price'] = 50000,
+        ['category'] = 'muscle',
+        ['hash'] = `gstcoronet1`,
+        ['shop'] = 'pdm',
+    },
+
+	['gt17'] = {
+		['name'] = 'GT 2017',
+        ['brand'] = 'Ford',
+        ['model'] = 'gt17',
+        ['price'] = 1500000,
+        ['category'] = 'super',
+        ['hash'] = `gt17`,
+        ['shop'] = 'luxury',
+    },
+
+	['hs2000'] = {
+		['name'] = 'S2000',
+        ['brand'] = 'Honda',
+        ['model'] = 'hs2000',
+        ['price'] = 25000,
+        ['category'] = 'sports',
+        ['hash'] = `hs2000`,
+        ['shop'] = 'pdm',
+    },
+
+	['ss69'] = {
+		['name'] = 'Camaro SS 396',
+        ['brand'] = 'Chevrolet',
+        ['model'] = 'ss69',
+        ['price'] = 25000,
+        ['category'] = 'muscle',
+        ['hash'] = `ss69`,
+        ['shop'] = 'pdm',
+    },
+
+	['f812'] = {
+		['name'] = '812',
+        ['brand'] = 'Ferrari',
+        ['model'] = 'f812',
+        ['price'] = 500000,
+        ['category'] = 'super',
+        ['hash'] = `f812`,
+        ['shop'] = 'luxury',
+    },
+
+	['r6'] = {
+		['name'] = 'R6',
+        ['brand'] = 'Yamaha',
+        ['model'] = 'r6',
+        ['price'] = 80000,
+        ['category'] = 'motorcycles',
+        ['hash'] = `r6`,
+        ['shop'] = 'luxury',
+    },
+
+	['xkgt'] = {
+		['name'] = 'XKR-S GT',
+		['brand'] = 'Jaguar',
+		['model'] = 'xkgt',
+		['price'] = 250000,
+		['category'] = 'sports',
+		['hash'] = `xkgt`,
+		['shop'] = 'luxury',
+	},
+
+	['02rsx'] = {
+		['name'] = 'RSX-S',
+        ['brand'] = 'Acura',
+        ['model'] = '02rsx',
+        ['price'] = 50000,
+        ['category'] = 'sports',
+        ['hash'] = `02rsx`,
+        ['shop'] = 'pdm',
+    },
+
+	['70zr1'] = {
+		['name'] = 'Corvette Stingray',
+        ['brand'] = 'Chevrolet',
+        ['model'] = '70zr1',
+        ['price'] = 80000,
+        ['category'] = 'sportsclassics',
+        ['hash'] = `70zr1`,
+        ['shop'] = 'pdm',
+    },
+	
+	['cont88'] = {
+		['name'] = 'Countach',
+        ['brand'] = 'Lamborghini',
+        ['model'] = 'cont88',
+        ['price'] = 180000,
+        ['category'] = 'super',
+        ['hash'] = `cont88`,
+        ['shop'] = 'luxury',
+    },
+
+	['corvettec5z06'] = {
+		['name'] = 'Corvette C5 Z06',
+        ['brand'] = 'Chevrolet',
+        ['model'] = 'corvettec5z06',
+        ['price'] = 75000,
+        ['category'] = 'sports',
+        ['hash'] = `corvettec5z06`,
+        ['shop'] = 'luxury',
+    },
+
+	['dmc12'] = {
+		['name'] = 'DMC-12',
+        ['brand'] = 'DeLorean',
+        ['model'] = 'dmc12',
+        ['price'] = 20000,
+        ['category'] = 'sportsclassics',
+        ['hash'] = `dmc12`,
+        ['shop'] = 'pdm',
+    },
+
+	['fc3s'] = {
+		['name'] = 'FC RX7',
+        ['brand'] = 'Mazda',
+        ['model'] = 'fc3s',
+        ['price'] = 80000,
+        ['category'] = 'sports',
+        ['hash'] = `fc3s`,
+        ['shop'] = 'pdm',
+    },
+
+	['fgt'] = {
+		['name'] = '2005 GT',
+        ['brand'] = 'Ford',
+        ['model'] = 'fgt',
+        ['price'] = 850000,
+        ['category'] = 'super',
+        ['hash'] = `fgt`,
+        ['shop'] = 'luxury',
+    },
+
+	['ghostswb'] = {
+		['name'] = 'Ghost',
+        ['brand'] = 'Rolls Royce',
+        ['model'] = 'ghostswb',
+        ['price'] = 800000,
+        ['category'] = 'sedan',
+        ['hash'] = `ghostswb`,
+        ['shop'] = 'luxury',
+    },
+
+	['goldwing'] = {
+		['name'] = 'Goldwing',
+        ['brand'] = 'Honda',
+        ['model'] = 'goldwing',
+        ['price'] = 60000,
+        ['category'] = 'motorcycles',
+        ['hash'] = `goldwing`,
+        ['shop'] = 'luxury',
+    },
+
+	['hayabusa'] = {
+		['name'] = 'Hayabusa',
+        ['brand'] = 'Suzuki',
+        ['model'] = 'hayabusa',
+        ['price'] = 400000,
+        ['category'] = 'motorcycles',
+        ['hash'] = `hayabusa`,
+        ['shop'] = 'luxury',
+    },
+
+	['golf75r'] = {
+		['name'] = 'Golf',
+        ['brand'] = 'Volkswagen',
+        ['model'] = 'golf75r',
+        ['price'] = 25000,
+        ['category'] = 'sports',
+        ['hash'] = `golf75r`,
+        ['shop'] = 'pdm',
+    },
+
+	['gtr50'] = {
+		['name'] = 'GTR 50',
+        ['brand'] = 'Nissan',
+        ['model'] = 'gtr50',
+        ['price'] = 800000,
+        ['category'] = 'super',
+        ['hash'] = `gtr50`,
+        ['shop'] = 'luxury',
+    },
+
+	['hondacivictr'] = {
+		['name'] = 'Civic Type-R',
+        ['brand'] = 'Honda',
+        ['model'] = 'hondacivictr',
+        ['price'] = 28000,
+        ['category'] = 'sports',
+        ['hash'] = `hondacivictr`,
+        ['shop'] = 'pdm',
+    },
+
+	['huayra'] = {
+		['name'] = 'Huayra',
+        ['brand'] = 'Pagani',
+        ['model'] = 'huayra',
+        ['price'] = 900000,
+        ['category'] = 'super',
+        ['hash'] = `huayra`,
+        ['shop'] = 'luxury',
+    },
+
+	['lada2107'] = {
+		['name'] = 'Shitbox',
+        ['brand'] = 'Lada',
+        ['model'] = 'lada2107',
+        ['price'] = 2000,
+        ['category'] = 'sedan',
+        ['hash'] = `lada2107`,
+        ['shop'] = 'pdm',
+    },
+
+	['lexlfa10'] = {
+		['name'] = 'LFA',
+        ['brand'] = 'Lexus',
+        ['model'] = 'lexlfa10',
+        ['price'] = 400000,
+        ['category'] = 'super',
+        ['hash'] = `lexlfa10`,
+        ['shop'] = 'luxury',
+    },
+
+	['lp610'] = {
+		['name'] = 'Huracan Spider',
+        ['brand'] = 'Lamborghini',
+        ['model'] = 'lp610',
+        ['price'] = 450000,
+        ['category'] = 'super',
+        ['hash'] = `lp610`,
+        ['shop'] = 'luxury',
+    },
+
+	['lp770'] = {
+		['name'] = 'Centenario',
+        ['brand'] = 'Lamborghini',
+        ['model'] = 'lp770',
+        ['price'] = 1500000,
+        ['category'] = 'super',
+        ['hash'] = `lp770`,
+        ['shop'] = 'luxury',
+    },
+
+	['lpi8004'] = {
+		['name'] = 'Countach 2022',
+        ['brand'] = 'Lamborghini',
+        ['model'] = 'lpi8004',
+        ['price'] = 1200000,
+        ['category'] = 'super',
+        ['hash'] = `lpi8004`,
+        ['shop'] = 'luxury',
+    },
+
+	['n350z'] = {
+		['name'] = '350 Z',
+        ['brand'] = 'Nissan',
+        ['model'] = 'n350z',
+        ['price'] = 40000,
+        ['category'] = 'sports',
+        ['hash'] = `n350z`,
+        ['shop'] = 'pdm',
+    },
+
+	['na6'] = {
+		['name'] = 'Miata',
+        ['brand'] = 'Mazda',
+        ['model'] = 'na6',
+        ['price'] = 15000,
+        ['category'] = 'sports',
+        ['hash'] = `na6`,
+        ['shop'] = 'pdm',
+    },
+
+	['oycdefender'] = {
+		['name'] = 'Defender',
+        ['brand'] = 'Land Rover',
+        ['model'] = 'oycdefender',
+        ['price'] = 75000,
+        ['category'] = 'suvs',
+        ['hash'] = `oycdefender`,
+        ['shop'] = 'luxury',
+    },
+
+	['r820'] = {
+		['name'] = 'R8',
+        ['brand'] = 'Audi',
+        ['model'] = 'r820',
+        ['price'] = 200000,
+        ['category'] = 'super',
+        ['hash'] = `r820`,
+        ['shop'] = 'luxury',
+    },
+
+	['rs318'] = {
+		['name'] = 'RS3',
+        ['brand'] = 'Audi',
+        ['model'] = 'rs318',
+        ['price'] = 50000,
+        ['category'] = 'sedans',
+        ['hash'] = `rs318`,
+        ['shop'] = 'pdm',
+    },
+
+	['rs318'] = {
+		['name'] = 'RS3',
+        ['brand'] = 'Audi',
+        ['model'] = 'rs318',
+        ['price'] = 50000,
+        ['category'] = 'sedans',
+        ['hash'] = `rs318`,
+        ['shop'] = 'pdm',
+    },
+
+	['subwrx'] = {
+		['name'] = 'WRX STI',
+        ['brand'] = 'Subaru',
+        ['model'] = 'subwrx',
+        ['price'] = 15000,
+        ['category'] = 'sedans',
+        ['hash'] = `subwrx`,
+        ['shop'] = 'pdm',
+    },
+
+	['vectorw'] = {
+		['name'] = 'W8',
+        ['brand'] = 'Vector',
+        ['model'] = 'vectorw',
+        ['price'] = 2000000,
+        ['category'] = 'super',
+        ['hash'] = `vectorw`,
+        ['shop'] = 'luxury',
+    },
+
+	['z32'] = {
+		['name'] = '300 ZX',
+        ['brand'] = 'Nissan',
+        ['model'] = 'z32',
+        ['price'] = 30000,
+        ['category'] = 'sports',
+        ['hash'] = `z32`,
+        ['shop'] = 'pdm',
+    },
+
+	['avj'] = {
+		['name'] = 'Aventador J',
+        ['brand'] = 'Lamborghini',
+        ['model'] = 'avj',
+        ['price'] = 1800000,
+        ['category'] = 'super',
+        ['hash'] = `avj`,
+        ['shop'] = 'luxury',
+    },
+
+	['monza'] = {
+		['name'] = 'Monza SP2',
+        ['brand'] = 'Ferrari',
+        ['model'] = 'monza',
+        ['price'] = 1600000,
+        ['category'] = 'super',
+        ['hash'] = `monza`,
+        ['shop'] = 'luxury',
+    },
+
+	['Speedster'] = {
+		['name'] = 'Speedster',
+        ['brand'] = 'Aston Martin',
+        ['model'] = 'Speedster',
+        ['price'] = 1700000,
+        ['category'] = 'super',
+        ['hash'] = `Speedster`,
+        ['shop'] = 'luxury',
+    },
 	-- [''] = {
 	-- 	['name'] = '',
     --     ['brand'] = '',
