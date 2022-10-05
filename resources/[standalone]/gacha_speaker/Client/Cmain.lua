@@ -292,9 +292,9 @@ else
                         if distance < 1.5 then
                             neearSpeaker = k
                             if v.default == false then
-                                QBCore.Functions.HelpNotify("Presiona ~INPUT_CONTEXT~ para acceder a la radio o BackSpace para recogerla")
+                                QBCore.Functions.Notify("Press ~INPUT_CONTEXT~ to access the radio or BackSpace to pick it up")
                             else
-                                QBCore.Functions.HelpNotify("Presiona ~INPUT_CONTEXT~ para acceder a la radio")
+                                QBCore.Functions.Notify("Press ~INPUT_CONTEXT~ to access the radio.")
                             end
                             if IsControlJustPressed(0, 38) then
                                 isNotInRadio = false
