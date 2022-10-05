@@ -3,7 +3,7 @@ Config = {}
 Config.UsingQbTarget = true -- If you have qb-target make it true otherwise make it false.
 Config.MaxDistanceAtFullVolume = 40.0 -- Maximum distance to which music can me heared at full volume
 Config.isSoundPublic = true -- true = everyone can hear from car, false means only you can hear the music
-Config.ItemLinked = false --  if you want to link this to an item you can use Config.ItemLinked = 'itemnamehere'
+Config.ItemLinked = "speaker" --  if you want to link this to an item you can use Config.ItemLinked = 'itemnamehere'
 Config.CommandVehicle = "music" -- Only will work if Config.ItemLinked == false
 
 Config.MusicZones = {
