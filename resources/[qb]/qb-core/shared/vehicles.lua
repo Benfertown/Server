@@ -5043,7 +5043,7 @@ QBShared.Vehicles = {
     },
 
 	['f812'] = {
-		['name'] = '812',
+		['name'] = '812 Superfast',
         ['brand'] = 'Ferrari',
         ['model'] = 'f812',
         ['price'] = 500000,
@@ -5147,7 +5147,7 @@ QBShared.Vehicles = {
         ['brand'] = 'Rolls Royce',
         ['model'] = 'ghostswb',
         ['price'] = 800000,
-        ['category'] = 'sedan',
+        ['category'] = 'sedans',
         ['hash'] = `ghostswb`,
         ['shop'] = 'luxury',
     },
@@ -5217,7 +5217,7 @@ QBShared.Vehicles = {
         ['brand'] = 'Lada',
         ['model'] = 'lada2107',
         ['price'] = 2000,
-        ['category'] = 'sedan',
+        ['category'] = 'sedans',
         ['hash'] = `lada2107`,
         ['shop'] = 'pdm',
     },
@@ -5300,16 +5300,6 @@ QBShared.Vehicles = {
         ['category'] = 'super',
         ['hash'] = `r820`,
         ['shop'] = 'luxury',
-    },
-
-	['rs318'] = {
-		['name'] = 'RS3',
-        ['brand'] = 'Audi',
-        ['model'] = 'rs318',
-        ['price'] = 50000,
-        ['category'] = 'sedans',
-        ['hash'] = `rs318`,
-        ['shop'] = 'pdm',
     },
 
 	['rs318'] = {
