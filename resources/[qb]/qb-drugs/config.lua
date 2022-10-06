@@ -7,7 +7,7 @@ Config.PoliceCallChance = 15
 Config.Products = {
     [1] = {
         name = "weed_white-widow",
-        price = 15,
+        price = 125,
         amount = 150,
         info = {},
         type = "item",
@@ -16,7 +16,7 @@ Config.Products = {
     },
     [2] = {
         name = "weed_skunk",
-        price = 15,
+        price = 125,
         amount = 150,
         info = {},
         type = "item",
@@ -25,7 +25,7 @@ Config.Products = {
     },
     [3] = {
         name = "weed_purple-haze",
-        price = 15,
+        price = 125,
         amount = 150,
         info = {},
         type = "item",
@@ -34,7 +34,7 @@ Config.Products = {
     },
     [4] = {
         name = "weed_og-kush",
-        price = 15,
+        price = 125,
         amount = 150,
         info = {},
         type = "item",
@@ -43,7 +43,7 @@ Config.Products = {
     },
     [5] = {
         name = "weed_amnesia",
-        price = 15,
+        price = 125,
         amount = 150,
         info = {},
         type = "item",
@@ -52,7 +52,7 @@ Config.Products = {
     },
     [6] = {
         name = "weed_white-widow_seed",
-        price = 15,
+        price = 125,
         amount = 150,
         info = {},
         type = "item",
@@ -61,7 +61,7 @@ Config.Products = {
     },
     [7] = {
         name = "weed_skunk_seed",
-        price = 15,
+        price = 125,
         amount = 150,
         info = {},
         type = "item",
@@ -70,7 +70,7 @@ Config.Products = {
     },
     [8] = {
         name = "weed_purple-haze_seed",
-        price = 15,
+        price = 125,
         amount = 150,
         info = {},
         type = "item",
@@ -79,7 +79,7 @@ Config.Products = {
     },
     [9] = {
         name = "weed_og-kush_seed",
-        price = 15,
+        price = 125,
         amount = 150,
         info = {},
         type = "item",
@@ -88,7 +88,7 @@ Config.Products = {
     },
     [10] = {
         name = "weed_amnesia_seed",
-        price = 15,
+        price = 125,
         amount = 150,
         info = {},
         type = "item",
