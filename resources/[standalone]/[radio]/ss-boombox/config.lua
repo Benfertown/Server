@@ -41,4 +41,15 @@ Config.MusicZones = {
 		loop = true, -- loop a song
 		defaultTime = 0 -- start song from 0ms
 	},
+	{
+		name = "Burgershot",
+		coords = vector3(-1192.51, -890.51, 14.0),
+		job = "burgershot", --Only person with This job can have music controls
+		volume = 0.1, -- Default volume (0.0 to 1.0 as per xsound documentation)
+		range = 25.0, -- Maximum distance to which music can me heared at full volume
+		defaultLink = "https://www.youtube.com/watch?v=D1NdGBldg3w", -- Default song link (Leave Empty to playnothing)
+		isplaying = true, -- music automatically start playing defaultLink with server start/re-start
+		loop = true, -- loop a song
+		defaultTime = 0 -- start song from 0ms
+	},
 }
