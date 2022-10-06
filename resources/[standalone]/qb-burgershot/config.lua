@@ -15,7 +15,8 @@ Config.RareToys = {
 }
 
 Config.Shinies = {
-    "klayman-drbob-shiny", "klayman-chip-shiny"
+    "klayman-drbob-shiny", "klayman-chip-shiny", 
+    "klayman-lavachip", "klayman-shadowchip", "klayman-staticchip"
 }
 
 Config.Items = {
