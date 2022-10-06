@@ -1,7 +1,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local ActivePolice = 1  		--<< needed policemen to activate the mission
-local cashA = 250 				--<<how much minimum you can get from a robbery
-local cashB = 450				--<< how much maximum you can get from a robbery
+local cashA = 25000 				--<<how much minimum you can get from a robbery
+local cashB = 100000				--<< how much maximum you can get from a robbery
 local ActivationCost = 500		--<< how much is the activation of the mission (clean from the bank)
 local ResetTimer = 2700 * 1000  --<< timer every how many missions you can do, default is 600 seconds
 local ActiveMission = 0

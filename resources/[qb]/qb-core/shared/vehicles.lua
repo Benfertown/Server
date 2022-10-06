@@ -5392,6 +5392,47 @@ QBShared.Vehicles = {
         ['shop'] = 'luxury',
     },
 
+	-- === EMERGENCY VEHICLES ===
+	['mclarenpd'] ={
+		['name'] = 'Police Mclaren',
+		['brand'] = 'Mclaren',
+		['model'] = 'mclarenpd',
+		['price'] = 100000,
+		['category'] = 'emergency',
+		['hash'] = `mclarenpd`,
+		['shop'] = 'luxury',
+	},
+
+	['audipd'] ={
+		['name'] = 'Police Audi',
+		['brand'] = 'Audi',
+		['model'] = 'audipd',
+		['price'] = 100000,
+		['category'] = 'emergency',
+		['hash'] = `audipd`,
+		['shop'] = 'luxury',
+	},
+
+	['corvettepd'] ={
+		['name'] = 'Police Corvette',
+		['brand'] = 'Chevrolet',
+		['model'] = 'corvettepd',
+		['price'] = 100000,
+		['category'] = 'emergency',
+		['hash'] = `corvettepd`,
+		['shop'] = 'luxury',
+	},
+
+	['porschepd'] ={
+		['name'] = 'Police Porsche',
+		['brand'] = 'Porsche',
+		['model'] = 'porschepd',
+		['price'] = 100000,
+		['category'] = 'emergency',
+		['hash'] = `porschepd`,
+		['shop'] = 'luxury',
+	},
+
 	-- [''] = {
 	-- 	['name'] = '',
     --     ['brand'] = '',
