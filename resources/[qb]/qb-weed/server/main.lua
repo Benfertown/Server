@@ -141,18 +141,18 @@ end)
 RegisterNetEvent('qb-weed:server:harvestPlant', function(house, amount, plantName, plantId)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
-    local weedBag = Player.Functions.GetItemByName('empty_weed_bag')
+    --local weedBag = Player.Functions.GetItemByName('empty_weed_bag')
     local sndAmount = math.random(12, 16)
 
-    if weedBag ~= nil then
-        if weedBag.amount >= sndAmount then
+    -- if weedBag ~= nil then
+        -- if weedBag.amount >= sndAmount then
             if house ~= nil then
                 local result = MySQL.query.await(
                     'SELECT * FROM house_plants WHERE plantid = ? AND building = ?', {plantId, house})
                 if result[1] ~= nil then
                     Player.Functions.AddItem('weed_' .. plantName .. '_seed', amount)
-                    Player.Functions.AddItem('weed_' .. plantName, sndAmount)
-                    Player.Functions.RemoveItem('empty_weed_bag', sndAmount)
+                    Player.Functions.AddItem('weedleaf', sndAmount)
+                    --Player.Functions.RemoveItem('empty_weed_bag', sndAmount)
                     MySQL.query('DELETE FROM house_plants WHERE plantid = ? AND building = ?',
                         {plantId, house})
                     TriggerClientEvent('QBCore:Notify', src,  Lang:t('text.the_plant_has_been_harvested'), 'success', 3500)
@@ -163,12 +163,12 @@ RegisterNetEvent('qb-weed:server:harvestPlant', function(house, amount, plantNam
             else
                 TriggerClientEvent('QBCore:Notify', src, Lang:t('error.house_not_found'), 'error', 3500)
             end
-        else
-            TriggerClientEvent('QBCore:Notify', src, Lang:t('error.you_dont_have_enough_resealable_bags'), 'error', 3500)
-        end
-    else
-        TriggerClientEvent('QBCore:Notify', src, Lang:t('error.you_Dont_have_enough_resealable_bags'), 'error', 3500)
-    end
+        -- else
+        --     TriggerClientEvent('QBCore:Notify', src, Lang:t('error.you_dont_have_enough_resealable_bags'), 'error', 3500)
+        -- end
+    -- else
+    --     TriggerClientEvent('QBCore:Notify', src, Lang:t('error.you_Dont_have_enough_resealable_bags'), 'error', 3500)
+    -- end
 end)
 
 RegisterNetEvent('qb-weed:server:foodPlant', function(house, amount, plantName, plantId)
