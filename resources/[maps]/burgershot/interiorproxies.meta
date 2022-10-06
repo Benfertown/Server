@@ -2,9 +2,6 @@
 <SInteriorOrderData>
   <startFrom value="3000" />
   <proxies>
-	<Item>NAME_OF_INTERIOR_YMAPS</Item>
-	<Item>NAME_OF_INTERIOR_YMAPS</Item>
-	<Item>NAME_OF_INTERIOR_YMAPS</Item>
-	<Item>NAME_OF_INTERIOR_YMAPS</Item>
+	<Item>vespucci_burgershot_milo_</Item>
   </proxies>
 </SInteriorOrderData>
