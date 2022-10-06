@@ -311,4 +311,15 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['dj'] = {
+		label = 'DJ',
+		defaultDuty = true,
+		offDutyPay = true,
+		grades = {
+            ['0'] = {
+                name = 'Track Spinner',
+                payment = 500
+            },
+        },
+	},
 }
