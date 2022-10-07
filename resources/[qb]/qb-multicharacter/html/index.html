@@ -262,6 +262,9 @@
                     viewmodel.selectedCharacter = idx
 
                     if (viewmodel.characters[idx] !== undefined) {
+                        if (axios == null) {
+                            alert("axios is null!");
+                        }
                         axios.post('https://qb-multicharacter/cDataPed', {
                             cData: viewmodel.characters[idx]
                         });
