@@ -142,7 +142,7 @@ RegisterNetEvent('qb-weed:server:harvestPlant', function(house, amount, plantNam
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     --local weedBag = Player.Functions.GetItemByName('empty_weed_bag')
-    local sndAmount = math.random(12, 16)
+    local sndAmount = math.random(20, 60)
 
     -- if weedBag ~= nil then
         -- if weedBag.amount >= sndAmount then
