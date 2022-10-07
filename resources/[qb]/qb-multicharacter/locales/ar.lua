@@ -1,4 +1,4 @@
-Translations = {
+local Translations = {
     notifications = {
         ["char_deleted"] = "تم حذف الشخصية!",
         ["deleted_other_char"] = "لقد قمت بحذف الشخصية رقم الايدي  %{citizenid}.",
@@ -71,7 +71,10 @@ Translations = {
     }
 }
 
-Lang = Locale:new({
-    phrases = Translations,
-    warnOnMissing = true
-})
+if GetConvar('qb_locale', 'en') == 'ar' then
+    Lang = Locale:new({
+        phrases = Translations,
+        warnOnMissing = true,
+        fallbackLang = Lang,
+    })
+end

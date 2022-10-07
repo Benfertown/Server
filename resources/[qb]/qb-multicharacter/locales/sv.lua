@@ -1,4 +1,4 @@
-Translations = {
+local Translations = {
     notifications = {
         ["char_deleted"] = "Karaktären togs bort!",
         ["deleted_other_char"] = "Du tog bort karaktären med citizen id %{citizenid}.",
@@ -71,7 +71,10 @@ Translations = {
     }
 }
 
-Lang = Locale:new({
-    phrases = Translations,
-    warnOnMissing = true
-})
+if GetConvar('qb_locale', 'en') == 'sv' then
+    Lang = Locale:new({
+        phrases = Translations,
+        warnOnMissing = true,
+        fallbackLang = Lang,
+    })
+end
