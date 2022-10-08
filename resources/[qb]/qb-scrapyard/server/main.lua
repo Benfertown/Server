@@ -27,7 +27,7 @@ RegisterNetEvent('qb-scrapyard:server:ScrapVehicle', function(listKey)
         moneyVal = math.random(1000, 10000)
     end
     
-    Player.Functions.AddMoney(moneyVal)
+    Player.Functions.AddMoney('cash', moneyVal)
 
     for _ = 1, math.random(2, 4), 1 do
         local item = Config.Items[math.random(1, #Config.Items)]
