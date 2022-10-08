@@ -63,20 +63,27 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
         for _ = 1, itemCount, 1 do
             local randomItem
             local roll = math.random(100)
+            local num
+            -- local num = math.random( # Config.SuperRares )
+            -- randomItem = Config.SuperRares[num]
 
-            local num = math.random( # Config.SuperRares )
+            -- print("SUPER RARE: " .. randomItem)
+            -- -- randomItem = Config.Rares[math.random( # Config.SuperRares )]
+
+            num = math.random( # Config.SuperRares )
             randomItem = Config.SuperRares[num]
-
             print("SUPER RARE: " .. randomItem)
-            -- randomItem = Config.Rares[math.random( # Config.SuperRares )]
+            Player.Functions.AddItem(randomItem, 1)
 
 
             if roll == 1 then
                 -- if math.random(100) > 1 then
-                --     randomItem = Config.Rares[math.random( # Config.Rares )]
+                --     num = math.random( # Config.Rares )
+                --     randomItem = Config.Rares[num]
                 --     print("rare item: " .. randomItem)
                 -- else
-                --     randomItem = Config.Rares[math.random( # Config.SuperRares )]
+                --     num = math.random( # Config.SuperRares )
+                --     randomItem = Config.SuperRares[num]
                 --     print("SUPER RARE: " .. randomItem)
                 -- end
             else
@@ -94,7 +101,6 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
                 Player.Functions.AddItem(randomItem, 1)
                 TriggerClientEvent('inventory:client:ItemBox', src, itemInfo, "add")
             else
-                print(randomItem)
                 if not itemInfo["unique"] then
                     local itemAmount = math.random(1, 3)
                     if randomItem == "goldchain" then
