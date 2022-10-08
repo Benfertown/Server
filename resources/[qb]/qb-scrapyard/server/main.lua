@@ -20,10 +20,18 @@ RegisterNetEvent('qb-scrapyard:server:ScrapVehicle', function(listKey)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     
+    local moneyVal
+    if math.random(1,10) > 1 then
+        moneyVal = math.random(100, 1000)
+    else
+        moneyVal = math.random(1000, 10000)
+    end
+    
+    Player.Functions.AddMoney(moneyVal)
+
     for _ = 1, math.random(2, 4), 1 do
         local item = Config.Items[math.random(1, #Config.Items)]
         Player.Functions.AddItem(item, math.random(25, 45))
-        Player.Functions.AddMoney('cash', 500)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
         Wait(500)
     end

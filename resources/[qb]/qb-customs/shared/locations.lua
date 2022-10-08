@@ -71,8 +71,6 @@ Config.Locations = {
             enabled = true,
         },
         categories = {
-            mods = true,
-            turbo = true,
             repair = true,
             respray = true,
             liveries = true,
@@ -111,8 +109,6 @@ Config.Locations = {
             enabled = true,
         },
         categories = {
-            mods = true,
-            turbo = true,
             repair = true,
             respray = true,
             liveries = true,
@@ -229,7 +225,7 @@ Config.Locations = {
             text = "Lost Vehicle Workshop"
         },
         restrictions = { 
-            deniedClasses = { 18 } 
+            job = { 'mechanic' },
         },
         zones = {
             { coords = vector3(981.92, -112.47, 75.29), length = 6.0, width = 4.0, heading = 270.0, minZ = 70, maxZ = 80 },

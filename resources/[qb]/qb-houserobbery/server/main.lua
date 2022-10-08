@@ -62,10 +62,14 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
 
         for _ = 1, itemCount, 1 do
             local randomItem
-            local roll = math.random(20)
+            local roll = math.random(100)
             
             if roll == 1 then
-                randomItem = Config.Rares[math.random(# Config.Rares)]
+                if math.random(100) == 1 then
+                    randomItem = Config.Rares[math.random(# Config.Rares)]
+                else
+                    randomItem = Config.Rares[math.random(# Config.SuperRares)]
+                end
             else
                 randomItem = Config.Rewards[Tier][Config.Houses[house]["furniture"][cabin]["type"]][math.random(1, #Config.Rewards[Tier][Config.Houses[house]["furniture"][cabin]["type"]])]
             end
@@ -83,22 +87,12 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
             else
                 if not itemInfo["unique"] then
                     local itemAmount = math.random(1, 3)
-                    if randomItem == "plastic" then
-                        itemAmount = math.random(5, 15)
-                    elseif randomItem == "goldchain" then
+                    if randomItem == "goldchain" then
                         itemAmount = math.random(1, 4)
                     elseif randomItem == "pistol_ammo" then
                         itemAmount = math.random(1, 3)
                     elseif randomItem == "weed_skunk" then
                         itemAmount = math.random(1, 6)
-                    elseif randomItem == "cryptostick" then
-                        itemAmount = math.random(1, 2)
-                    elseif randomItem == "rubber" then
-                        itemAmount = math.random(5, 15)
-                    elseif randomItem == "metalscrap" then
-                        itemAmount = math.random(5, 15)
-                    elseif randomItem == "glass" then
-                        itemAmount = math.random(5, 15)
                     end
 
                     Player.Functions.AddItem(randomItem, itemAmount)

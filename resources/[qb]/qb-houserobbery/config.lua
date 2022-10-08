@@ -9,15 +9,107 @@ Config.MaximumTime = 22
 
 Config.Rewards = {
     [1] = {
-        ["cabin"] = {"plastic", "diamond_ring", "goldchain", "weed_skunk", "thermite", },
+        ["cabin"] = {"diamond_ring", "goldchain", "weed_skunk"},
         ["kitchen"] = {"tosti", "sandwich", "goldchain"},
-        ["chest"] = {"metalscrap", "rubber", "rolex", "diamond_ring", "goldchain", "weed_skunk", "thermite",  "weapon_combatpistol"},
-        ["livingroom"] = {"glass", "rolex", "diamond_ring", "goldchain", "tablet", "pistol_ammo"}
+        ["chest"] = {"rolex", "diamond_ring", "goldchain", "weed_skunk", },
+        ["livingroom"] = {"rolex", "diamond_ring", "goldchain", "tablet", "pistol_ammo"}
     }
 }
 
 Config.Rares = {
-    "rawmeth", "cokeleaf", "weedleaf", "thermite"
+    "rawmeth", "cokeleaf", "thermite", 
+    "weed_og-kush_seed"
+}
+
+Config.SuperRares = {
+    -- PISTOL ATTACHMENTS
+    'pistol_extendedclip',
+    'pistol_flashlight',
+    'pistol_suppressor',
+    'pistol_luxuryfinish',
+    'combatpistol_extendedclip',
+    'combatpistol_luxuryfinish',
+    'appistol_extendedclip',
+    'appistol_luxuryfinish',
+    'pistol50_extendedclip',
+    'pistol50_luxuryfinish',
+    'revolver_vipvariant',
+    'revolver_bodyguardvariant',
+    'snspistol_extendedclip',
+    'snspistol_grip',
+    'heavypistol_extendedclip',
+    'heavypistol_grip',
+    'vintagepistol_extendedclip',
+
+	-- SMG ATTACHMENTS
+    'microsmg_extendedclip',
+    'microsmg_scope',
+    'microsmg_luxuryfinish',
+    'smg_defaultclip',
+    'smg_extendedclip',
+    'smg_suppressor',
+    'smg_drum',
+    'smg_scope',
+    'smg_luxuryfinish',
+    'assaultsmg_extendedclip',
+    'assaultsmg_luxuryfinish',
+    'minismg_defaultclip',
+    'minismg_extendedclip',
+    'machinepistol_extendedclip',
+    'machinepistol_drum',
+    'combatpdw_extendedclip',
+    'combatpdw_drum',
+    'combatpdw_grip',
+    'combatpdw_scope',
+
+	-- SHOTGUN ATTACHMENTS
+	'shotgun_suppressor',
+    'pumpshotgun_luxuryfinish',
+    'sawnoffshotgun_luxuryfinish',
+    'assaultshotgun_extendedclip',
+    'heavyshotgun_extendedclip',
+    'heavyshotgun_drum',
+
+	-- RIFLE ATTACHMENTS
+    'assaultrifle_extendedclip',
+    'assaultrifle_drum',
+    'rifle_flashlight',
+    'rifle_grip',
+    'rifle_suppressor',
+    'assaultrifle_luxuryfinish',
+    'carbinerifle_extendedclip',
+    'carbinerifle_drum',
+    'carbinerifle_scope',
+    'carbinerifle_luxuryfinish',
+    'advancedrifle_extendedclip',
+    'advancedrifle_luxuryfinish',
+    'specialcarbine_defaultclip',
+    'specialcarbine_extendedclip',
+    'specialcarbine_drum',
+    'specialcarbine_luxuryfinish',
+    'bullpuprifle_extendedclip',
+    'bullpuprifle_luxuryfinish',
+    'compactrifle_extendedclip',
+    'compactrifle_drum',
+    'gusenberg_extendedclip',
+
+	-- SNIPER ATTACHMENTS
+    'sniper_scope',
+    'snipermax_scope',
+    'sniper_grip',
+    'marksmanrifle_extendedclip',
+    'marksmanrifle_scope',
+    'marksmanrifle_luxuryfinish',
+
+	-- Weapon Tints
+	'weapontint_black',
+    'weapontint_green',
+    'weapontint_gold',
+    'weapontint_pink',
+    'weapontint_army',
+    'weapontint_lspd',
+    'weapontint_orange',
+    'weapontint_plat',
 }
 
 Config.Houses = {

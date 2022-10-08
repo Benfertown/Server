@@ -6,9 +6,52 @@ local cooldowns = {}
 local canSpin = false
 
 local weaponsPool = {
-    'weapon_assaultrifle', 'weapon_combatshotgun', 'weapon_assaultsmg', 'weapon_mg',
-    'weapon_heavysniper', 'weapon_advancedrifle', 'weapon_assaultshotgun', 'weapon_revolver',
+    -- Submachine Guns
+	'weapon_microsmg',
+    'weapon_smg',
+    'weapon_smg_mk2',
+    'weapon_assaultsmg',
+    'weapon_combatpdw',
+    'weapon_machinepistol',
+    'weapon_minismg',
+    
+	-- Shotguns
+	'weapon_pumpshotgun',
     'weapon_sawnoffshotgun',
+    'weapon_assaultshotgun',
+    'weapon_bullpupshotgun',
+    'weapon_musket',
+    'weapon_heavyshotgun',
+    'weapon_dbshotgun',
+    'weapon_autoshotgun',
+    'weapon_pumpshotgun_mk2',
+    'weapon_combatshotgun',
+    
+	-- Assault Rifles
+	'weapon_assaultrifle',
+    'weapon_assaultrifle_mk2',
+    'weapon_carbinerifle',
+    'weapon_carbinerifle_mk2',
+    'weapon_advancedrifle',
+    'weapon_specialcarbine',
+    'weapon_bullpuprifle',
+    'weapon_compactrifle',
+    'weapon_specialcarbine_mk2',
+    'weapon_bullpuprifle_mk2',
+    'weapon_militaryrifle',
+    
+	-- Light Machine Guns
+	'weapon_mg',
+    'weapon_combatmg',
+    'weapon_gusenberg',
+    'weapon_combatmg_mk2',
+
+	-- Sniper Rifles
+	'weapon_sniperrifle',
+    'weapon_heavysniper',
+    'weapon_marksmanrifle',
+    'weapon_heavysniper_mk2',
+    'weapon_marksmanrifle_mk2',
 }
 
 local ammoPool = {
@@ -57,23 +100,9 @@ RegisterNetEvent('qb-luckywheel:server:getLucky', function()
                 local _randomPrice = math.random(1, 100)
                 if _randomPrice == 1 then
                     _priceIndex = 19
-                    -- idk what the previous dev was doing here but it's like they programmed the player to be able to win the car, but then never wanted them to ever get it
-                    -- -- Win car
-                    -- local _subRan = math.random(1,1000)
-                    -- if _subRan <= 1 then
-                    --     _priceIndex = 19
-                    -- else
-                    --     _priceIndex = 3
-                    -- end
                 elseif _randomPrice > 1 and _randomPrice <= 6 then
-                    -- Win skin AK Gold
+                    -- Win gun
                     _priceIndex = 12
-                    local _subRan = math.random(1,20)
-                    if _subRan <= 2 then
-                        _priceIndex = 12
-                    else
-                        _priceIndex = 7
-                    end
                 elseif _randomPrice > 6 and _randomPrice <= 15 then
                     -- Hacker stuff
                     -- 4, 8, 11, 16
@@ -199,40 +228,13 @@ RegisterNetEvent('qb-luckywheel:server:carRedeem', function(vehicleProps)
     local source = source
 
     local xPlayer = QBCore.Functions.GetPlayer(source)
-    
-    -- local plate = 'CSNO'
-    -- local getPlate = true
-    -- local plateAvailable = ''
-    -- while getPlate do
-    --     Citizen.Wait(0)
-    --     local plateNumbers = math.random(1000,9999)
-    --     local testplate = plate..plateNumbers
-    --     local result = exports.oxmysql:scalarSync('SELECT * from player_vehicles WHERE plate = ?', {plate})
-    --         if result[1] == nil then
-    --             plateAvailable = 'not_available'
-    --         else
-    --             plateAvailable = result[1]
-    --     if plateAvailable == 'not_available' then
-    --         vehicleProps.plate = testplate
-    --         getPlate = false
-    --     end
-    -- end
+
     local vehiclePropsjson = json.encode(vehicleProps)
     if car then
         car = false 
         TriggerClientEvent('QBCore:Notify', source, 'You won a car!', 'success')
         TriggerClientEvent('qb-luckywheel:client:winCarEmail', source)
-        -- MySQL.insert(
-        --     'INSERT INTO player_vehicles (license, citizenid, vehicle, hash, mods, plate, state) VALUES (?, ?, ?, ?, ?, ?, ?)', {
-        --         xPlayer.PlayerData.license,
-        --         xPlayer.PlayerData.citizenid, 
-        --         Config.VehicleName,
-        --         GetHashKey(Config.Vehicle),
-        --         vehiclePropsjson,
-        --         tostring(math.random(1000,9999)),
-        --         'motelgarage',
-        --         0
-        -- })
+
         exports.oxmysql:insert('INSERT INTO player_vehicles (license, citizenid, vehicle, hash, mods, plate, garage, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', {
             xPlayer.PlayerData.license,
             xPlayer.PlayerData.citizenid,
