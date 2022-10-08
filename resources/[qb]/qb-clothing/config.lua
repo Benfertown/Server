@@ -140,7 +140,17 @@ Config.WomanPlayerModels = {
     's_f_y_sweatshop_01',
     'ig_paige',
     'a_f_y_femaleagent',
-    'a_f_y_hippie_01'
+    'a_f_y_hippie_01',
+    'a_c_chop',
+    'a_c_husky',
+    'a_c_pug',
+    'a_c_poodle',
+    'a_c_mtlion',
+    'a_c_rabbit_01',
+    'a_c_retriever',
+    'a_c_rottweiler',
+    'a_c_shepherd',
+    'a_c_westy'
 }
 
 Config.ManPlayerModels = {
@@ -500,7 +510,17 @@ Config.ManPlayerModels = {
     'ig_car3guy1_m',
     'tony',
     'g_m_m_chigoon_02_m',
-    'a_m_o_acult_01'
+    'a_m_o_acult_01',
+    'a_c_chop',
+    'a_c_husky',
+    'a_c_pug',
+    'a_c_poodle',
+    'a_c_mtlion',
+    'a_c_rabbit_01',
+    'a_c_retriever',
+    'a_c_rottweiler',
+    'a_c_shepherd',
+    'a_c_westy'
 }
 Config.LoadedManModels = {}
 Config.LoadedWomanModels = {}
