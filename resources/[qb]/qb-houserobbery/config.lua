@@ -18,7 +18,7 @@ Config.Rewards = {
 
 Config.Rares = {
     "rawmeth", "cokeleaf", "thermite", 
-    "weed_og-kush_seed"
+    "weed_og-kush_seed",
 }
 
 Config.SuperRares = {

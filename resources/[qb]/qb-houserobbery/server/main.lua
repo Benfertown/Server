@@ -65,10 +65,12 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
             local roll = math.random(100)
             
             if roll == 1 then
-                if math.random(100) == 1 then
-                    randomItem = Config.Rares[math.random(# Config.Rares)]
+                if math.random(100) > 1 then
+                    randomItem = Config.Rares[math.random( # Config.Rares )]
+                    print("rare item: " .. randomItem)
                 else
-                    randomItem = Config.Rares[math.random(# Config.SuperRares)]
+                    randomItem = Config.Rares[math.random( # Config.SuperRares )]
+                    print("SUPER RARE: " .. randomItem)
                 end
             else
                 randomItem = Config.Rewards[Tier][Config.Houses[house]["furniture"][cabin]["type"]][math.random(1, #Config.Rewards[Tier][Config.Houses[house]["furniture"][cabin]["type"]])]
