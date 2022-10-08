@@ -68,7 +68,7 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
                 if math.random(100) > 1 then
                     randomItem = Config.Rares[math.random( # Config.Rares )]
                     print("rare item: " .. randomItem)
-                else
+                elseif 1 == 1 then
                     randomItem = Config.Rares[math.random( # Config.SuperRares )]
                     print("SUPER RARE: " .. randomItem)
                 end
