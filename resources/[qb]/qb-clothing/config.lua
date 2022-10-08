@@ -150,7 +150,8 @@ Config.WomanPlayerModels = {
     'a_c_retriever',
     'a_c_rottweiler',
     'a_c_shepherd',
-    'a_c_westy'
+    'a_c_westy',
+    'a_c_deer'
 }
 
 Config.ManPlayerModels = {
@@ -520,7 +521,8 @@ Config.ManPlayerModels = {
     'a_c_retriever',
     'a_c_rottweiler',
     'a_c_shepherd',
-    'a_c_westy'
+    'a_c_westy',
+    'a_c_deer'
 }
 Config.LoadedManModels = {}
 Config.LoadedWomanModels = {}
