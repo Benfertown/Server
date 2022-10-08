@@ -64,31 +64,20 @@ RegisterNetEvent('qb-houserobbery:server:searchCabin', function(cabin, house)
             local randomItem
             local roll = math.random(100)
             local num
-            -- local num = math.random( # Config.SuperRares )
-            -- randomItem = Config.SuperRares[num]
-
-            -- print("SUPER RARE: " .. randomItem)
-            -- -- randomItem = Config.Rares[math.random( # Config.SuperRares )]
-
-            num = math.random( # Config.SuperRares )
-            randomItem = Config.SuperRares[num]
-            print("SUPER RARE: " .. randomItem)
-            Player.Functions.AddItem(randomItem, 1)
-
-
+            
             if roll == 1 then
-                -- if math.random(100) > 1 then
-                --     num = math.random( # Config.Rares )
-                --     randomItem = Config.Rares[num]
-                --     print("rare item: " .. randomItem)
-                -- else
-                --     num = math.random( # Config.SuperRares )
-                --     randomItem = Config.SuperRares[num]
-                --     print("SUPER RARE: " .. randomItem)
-                -- end
+                if math.random(100) > 1 then
+                    num = math.random( # Config.Rares )
+                    randomItem = Config.Rares[num]
+                else
+                    num = math.random( # Config.SuperRares )
+                    randomItem = Config.SuperRares[num]
+                end
+                Player.Functions.AddItem(randomItem, 1)
             else
                 randomItem = Config.Rewards[Tier][Config.Houses[house]["furniture"][cabin]["type"]][math.random(1, #Config.Rewards[Tier][Config.Houses[house]["furniture"][cabin]["type"]])]
             end
+
             local itemInfo = QBCore.Shared.Items[randomItem]
             if math.random(1, 100) == 69 then
                 randomItem = "painkillers"
