@@ -4188,6 +4188,26 @@ QBShared.Vehicles = {
 		['hash'] = `toro2`,
 		['shop'] = 'boats',
 	},
+
+	['submersible'] = {
+		['name'] = 'Yellow Submarine',
+		['brand'] = 'Beatle',
+		['model'] = 'submersible',
+		['price'] = 600000,
+		['category'] = 'boats',
+		['hash'] = `submersible`,
+		['shop'] = 'boats',
+	},
+
+	['submersible2'] = {
+		['name'] = 'Kraken',
+		['brand'] = 'Aquaman',
+		['model'] = 'submersible2',
+		['price'] = 600000,
+		['category'] = 'boats',
+		['hash'] = `submersible2`,
+		['shop'] = 'boats',
+	},
 	-- helicopters
 	['buzzard2'] = {
 		['name'] = 'Buzzard',
