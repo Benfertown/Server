@@ -1,6 +1,6 @@
 local config = {
     pedFrequency = 2.0,
-    trafficFrequency = 2.0
+    trafficFrequency = 10.0
 }
 
 Citizen.CreateThread(function()
