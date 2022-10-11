@@ -5453,6 +5453,36 @@ QBShared.Vehicles = {
 		['shop'] = 'luxury',
 	},
 
+	['tr22'] ={
+		['name'] = '2020 Roadster',
+		['brand'] = 'Tesla',
+		['model'] = 'tr22',
+		['price'] = 650000,
+		['category'] = 'super',
+		['hash'] = `tr22`,
+		['shop'] = 'luxury',
+	},
+
+	['terzo'] ={
+		['name'] = 'Terzo Millenio',
+		['brand'] = 'Lamborghini',
+		['model'] = 'terzo',
+		['price'] = 1000000,
+		['category'] = 'super',
+		['hash'] = `terzo`,
+		['shop'] = 'luxury',
+	},
+
+	['teslax'] ={
+		['name'] = 'Model X',
+		['brand'] = 'Tesla',
+		['model'] = 'teslax',
+		['price'] = 500000,
+		['category'] = 'sports',
+		['hash'] = `teslax`,
+		['shop'] = 'luxury',
+	},
+
 	-- [''] = {
 	-- 	['name'] = '',
     --     ['brand'] = '',
