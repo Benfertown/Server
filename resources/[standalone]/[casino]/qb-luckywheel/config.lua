@@ -7,7 +7,15 @@ local vehicle_pool = {
 
 local vehicle_pool_strings = {
     "thrax", "zentorno", "vacca", "tempesta2", "lp700",
-    "db11", "c7", "911r", "urus", "t20"
+    "db11", "c7", "911r", "urus", "t20",
+
+    -- electric cars
+    "teslax", "tr22", "terzo",
+
+    -- whatever
+    "2013rs7", "rs5", "Speedster", "monza", "avj", "z32",
+    "lpi8004", "lp770", "lp610", "laferrari", "458it",
+    "lp670sv",
 }
 
 local num = math.random( # vehicle_pool )
