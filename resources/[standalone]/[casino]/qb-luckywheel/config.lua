@@ -15,7 +15,7 @@ local vehicle_pool_strings = {
     -- whatever
     "2013rs7", "rs5", "Speedster", "monza", "avj", "z32",
     "lpi8004", "lp770", "lp610", "laferrari", "458it",
-    "lp670sv",
+    "lp670sv", "fgt", "gt17",
 }
 
 local num = math.random( # vehicle_pool )
