@@ -128,6 +128,7 @@ Config.Shops = {
             ['vans'] = 'Vans',
             ['sports'] = 'Sports',
             ['super'] = 'Supercars',
+            ['emergency'] = 'Emergency',
         },
         ['TestDriveTimeLimit'] = 0.5,
         ['Location'] = vector3(-1255.6, -361.16, 36.91),
