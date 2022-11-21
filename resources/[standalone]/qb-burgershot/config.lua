@@ -7,16 +7,19 @@ Config.GaragePedLocations = {
 Config.SQL = 'oxmysql' --- oxmysql or ghmattisql
 
 Config.Toys = {
-    "klayman-blue", "klayman-green", "klayman-pink", "klayman-red", "klayman-white", "klayman-yellow"
+    --"klayman-blue", "klayman-green", "klayman-pink", "klayman-red", "klayman-white", "klayman-yellow"
+    "hornhorse-chuckie", "hornhorse-pink", "hornhorse-blue"
 }
 
 Config.RareToys = {
-    "klayman-drbob", "klayman-chip"
+    --"klayman-drbob", "klayman-chip"
+    "hornhors-liopleurodon", "hornhorse-starfish"
 }
 
 Config.Shinies = {
-    "klayman-drbob-shiny", "klayman-chip-shiny", 
-    "klayman-lavachip", "klayman-shadowchip", "klayman-staticchip"
+    -- "klayman-drbob-shiny", "klayman-chip-shiny", 
+    -- "klayman-lavachip", "klayman-shadowchip", "klayman-staticchip"
+    "hornhorse-chuckie_shiny", "hornhorse-liopleurodon_shiny"
 }
 
 Config.Items = {
