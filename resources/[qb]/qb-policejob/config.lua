@@ -134,13 +134,13 @@ local ALLVEHICLES = {
         ["county18"] = "Sheriff 18",
 
         -- Supercars
-        ["mclarenpd"] = "Mclaren",
-        ["corvettepd"] = "Corvette",
-        ["audipd"] = "Audi",
-        ["porschepd"] = "Porsche",
+        -- ["mclarenpd"] = "Mclaren",
+        -- ["corvettepd"] = "Corvette",
+        -- ["audipd"] = "Audi",
+        -- ["porschepd"] = "Porsche",
 
         -- For when you have particularly violent criminals
-        ["apc"] = "Crowd Control Tank",
+        -- ["apc"] = "Crowd Control Tank",
 }
 
 Config.AuthorizedVehicles = {
